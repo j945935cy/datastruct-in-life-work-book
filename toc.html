@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>目錄 | 資料怎麼排，事情就怎麼順</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="toc">
+  <div class="progress-bar" aria-hidden="true">
+    <span id="reading-progress"></span>
+  </div>
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">Table of Contents</p>
+      <a class="brand" href="index.html">資料怎麼排，事情就怎麼順</a>
+    </div>
+    <nav class="top-nav" aria-label="主要導覽">
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於本書</a>
+    </nav>
+    <div class="reader-controls" aria-label="閱讀設定">
+      <button type="button" data-action="font-down">A-</button>
+      <button type="button" data-action="font-up">A+</button>
+      <button type="button" data-action="toggle-theme">深色模式</button>
+    </div>
+  </header>
+
+  <main class="toc-layout">
+    <section class="section-heading wide">
+      <p class="eyebrow">Sitemap</p>
+      <h1>目錄</h1>
+      <p>共 12 章，從資料結構為何重要談起，再一路走到搜尋、推薦與工作現場的應用。</p>
+    </section>
+
+    <section class="status-grid" aria-label="閱讀狀態">
+      <article class="status-card">
+        <p class="eyebrow">閱讀狀態</p>
+        <h2>最近讀到</h2>
+        <p id="last-read-label">尚未開始閱讀</p>
+      </article>
+      <article class="status-card">
+        <p class="eyebrow">第一版完成度</p>
+        <h2>目前可直接細讀</h2>
+        <p id="available-label">12 / 12 章完成樣板內容</p>
+      </article>
+      <article class="status-card">
+        <p class="eyebrow">建議起點</p>
+        <h2>最適合先讀</h2>
+        <p>若你想先有整體感，從第 1 章開始；若你想直接看整理方法，可從第 2 章與第 3 章切入。</p>
+      </article>
+    </section>
+
+    <section class="reading-note card">
+      <h2>閱讀提示</h2>
+      <p>全書 12 章皆已補成可閱讀版本，可直接作為第一版靜態電子書內容使用。</p>
+    </section>
+
+    <ol class="toc-list">
+      <li><a href="chapters/ch01.html" data-chapter-link="ch01" data-chapter-title="為什麼一般人也要懂資料結構" data-ready="true">為什麼一般人也要懂資料結構</a></li>
+      <li><a href="chapters/ch02.html" data-chapter-link="ch02" data-chapter-title="陣列：把東西整整齊齊排好" data-ready="true">陣列：把東西整整齊齊排好</a></li>
+      <li><a href="chapters/ch03.html" data-chapter-link="ch03" data-chapter-title="堆疊與佇列：排隊、疊放與流程順序" data-ready="true">堆疊與佇列：排隊、疊放與流程順序</a></li>
+      <li><a href="chapters/ch04.html" data-chapter-link="ch04" data-chapter-title="鏈結串列：彈性串接的思維" data-ready="true">鏈結串列：彈性串接的思維</a></li>
+      <li><a href="chapters/ch05.html" data-chapter-link="ch05" data-chapter-title="集合與字典：快速分組與查找" data-ready="true">集合與字典：快速分組與查找</a></li>
+      <li><a href="chapters/ch06.html" data-chapter-link="ch06" data-chapter-title="樹狀結構：分類、層級與目錄系統" data-ready="true">樹狀結構：分類、層級與目錄系統</a></li>
+      <li><a href="chapters/ch07.html" data-chapter-link="ch07" data-chapter-title="圖形結構：人際關係、交通路線與網路世界" data-ready="true">圖形結構：人際關係、交通路線與網路世界</a></li>
+      <li><a href="chapters/ch08.html" data-chapter-link="ch08" data-chapter-title="雜湊：為什麼有些查找就是特別快" data-ready="true">雜湊：為什麼有些查找就是特別快</a></li>
+      <li><a href="chapters/ch09.html" data-chapter-link="ch09" data-chapter-title="堆積：優先順序與資源分配" data-ready="true">堆積：優先順序與資源分配</a></li>
+      <li><a href="chapters/ch10.html" data-chapter-link="ch10" data-chapter-title="搜尋、推薦與管理系統裡的資料結構" data-ready="true">搜尋、推薦與管理系統裡的資料結構</a></li>
+      <li><a href="chapters/ch11.html" data-chapter-link="ch11" data-chapter-title="工作上其實早就在用資料結構" data-ready="true">工作上其實早就在用資料結構</a></li>
+      <li><a href="chapters/ch12.html" data-chapter-link="ch12" data-chapter-title="用資料結構訓練整理力與拆解力" data-ready="true">用資料結構訓練整理力與拆解力</a></li>
+    </ol>
+  </main>
+
+  <footer class="site-footer">
+    <p>建議從第 1 章開始，或挑最貼近你目前工作需求的章節切入。</p>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

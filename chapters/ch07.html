@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 7 章｜圖形結構：人際關係、交通路線與網路世界</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="chapter" data-chapter="ch07">
+  <div class="progress-bar" aria-hidden="true"><span id="reading-progress"></span></div>
+  <header class="site-header"><div class="brand-block"><p class="eyebrow">Chapter 07</p><a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a></div><nav class="top-nav" aria-label="章節導覽"><a href="../toc.html">目錄</a><a href="../about.html">關於本書</a></nav><div class="reader-controls" aria-label="閱讀設定"><button type="button" data-action="font-down">A-</button><button type="button" data-action="font-up">A+</button><button type="button" data-action="toggle-theme">深色模式</button></div></header>
+  <main class="page-shell">
+    <article class="chapter-article">
+      <header class="chapter-header">
+        <p class="chapter-tag">Chapter 07</p>
+        <h1>圖形結構：人際關係、交通路線與網路世界</h1>
+        <p class="chapter-summary">當資料重點不在層級，而在彼此的連結關係時，圖形結構會比樹更貼近真實世界。很多你以為只是「網路」的東西，本質上其實都是圖。</p>
+      </header>
+
+      <section>
+        <h2>本章開場</h2>
+        <p>如果你想從台北車站搭車去淡水，中間會經過哪些站？如果你想知道某位朋友和另一位朋友之間有沒有共同認識的人，又該怎麼想？這些問題都不是在問上下層級，而是在問「誰跟誰連在一起」。</p>
+      </section>
+
+      <section>
+        <h2>本章要解決的問題</h2>
+        <p>當資料之間的重點是關係，而不是分類或排序時，該怎麼描述它們？特別是在一筆資料可能同時連到很多其他資料時，單純的樹狀分類已經不夠用了。</p>
+      </section>
+
+      <section>
+        <h2>核心概念</h2>
+        <p>圖形結構的基本元素是節點與連線。節點代表人、地點、物件、系統或任務；連線則代表它們之間的關係。和樹狀結構不同的是，一個節點不一定只有一個上層，也可能與很多節點互相連接。</p>
+        <p>因此，圖特別適合描述社群網絡、交通路線、物流網、網站連結與系統依賴。它的重點不是某個元素在第幾層，而是從這裡能通到哪裡、彼此之間距離多遠、有哪些可能的路徑。</p>
+        <blockquote>圖形結構不是在分類世界，而是在描繪世界裡的連結。</blockquote>
+        <p>這也是為什麼很多現代服務離不開圖。只要你在乎「推薦誰給誰」、「從哪裡到哪裡」、「什麼東西彼此有關」，圖就會非常自然地出現。</p>
+      </section>
+
+      <section>
+        <h2>這在生活中像什麼</h2>
+        <p>捷運轉乘圖是一個很典型的例子。站點是節點，站與站之間的軌道是連線。你查路線時，不是在看層級，而是在找一條可行的路。社群關係也一樣，你和朋友、朋友的朋友，彼此之間形成一張關係網。</p>
+        <p>地圖導航、推薦餐廳、找共同好友，甚至安排送貨路線，本質上都在處理節點之間的關係與路徑。</p>
+      </section>
+
+      <section>
+        <h2>這在工作上有什麼用</h2>
+        <p>企業系統裡的服務相依圖、供應鏈流程、跨部門協作關係，都很像圖形結構。當某一個服務壞掉時，你需要知道它會影響哪些其他服務；當某個供應商延遲時，你要知道哪些流程會被連帶拖慢。</p>
+        <p>在專案管理中，若任務之間存在前置依賴或彼此影響，也很適合用圖來看。這比單純列清單更能看出哪些節點是關鍵，哪些路徑最容易卡住。</p>
+      </section>
+
+      <section>
+        <h2>為什麼重要</h2>
+        <ul>
+          <li>它能描述多對多關係，貼近真實世界。</li>
+          <li>它有助於理解路徑、依賴、影響範圍與推薦邏輯。</li>
+          <li>它讓我們看見資訊不是孤立的，而是互相牽動的。</li>
+        </ul>
+        <p>但圖也容易讓人頭大。當節點太多、連線太密，整張圖會迅速變得難以閱讀。所以圖的應用不只在於把關係畫出來，更在於挑出重要節點、看清關鍵路徑與核心影響。</p>
+      </section>
+
+      <section>
+        <h2>一句話總結</h2>
+        <p>當你要理解的是「誰跟誰有關」，圖形結構會比分類表更接近真相。</p>
+      </section>
+
+      <nav class="chapter-nav" aria-label="章節導覽"><a class="button secondary" href="ch06.html">上一章</a><a class="button secondary" href="../toc.html">回目錄</a><a class="button primary" href="ch08.html">下一章</a></nav>
+    </article>
+  </main>
+  <footer class="site-footer"><p>第 7 章讓資料結構從層級世界走進關係世界。</p></footer>
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
+  <script src="../script.js"></script>
+</body>
+</html>

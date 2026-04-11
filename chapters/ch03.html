@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 3 章｜堆疊與佇列：排隊、疊放與流程順序</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="chapter" data-chapter="ch03">
+  <div class="progress-bar" aria-hidden="true">
+    <span id="reading-progress"></span>
+  </div>
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">Chapter 03</p>
+      <a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a>
+    </div>
+    <nav class="top-nav" aria-label="章節導覽">
+      <a href="../toc.html">目錄</a>
+      <a href="../about.html">關於本書</a>
+    </nav>
+    <div class="reader-controls" aria-label="閱讀設定">
+      <button type="button" data-action="font-down">A-</button>
+      <button type="button" data-action="font-up">A+</button>
+      <button type="button" data-action="toggle-theme">深色模式</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <article class="chapter-article">
+      <header class="chapter-header">
+        <p class="chapter-tag">Chapter 03</p>
+        <h1>堆疊與佇列：排隊、疊放與流程順序</h1>
+        <p class="chapter-summary">有些事情講究先來後到，有些事情則是後放上去的東西要先拿下來。堆疊與佇列，正是在描述不同的順序規則。</p>
+      </header>
+
+      <section>
+        <h2>本章開場</h2>
+        <p>早餐店點餐時，通常是照排隊順序處理；但如果你把一疊盤子疊在櫃子裡，最後放上去的那一個，往往也是最先被拿走的那一個。這兩種看似普通的順序，正好對應到佇列與堆疊。</p>
+      </section>
+
+      <section>
+        <h2>本章要解決的問題</h2>
+        <p>同樣是安排事情先後順序，有些流程需要公平排隊，有些流程則需要優先處理最後一步。要怎麼分辨哪種規則適合哪種場景，是本章的重點。</p>
+      </section>
+
+      <section>
+        <h2>核心概念</h2>
+        <p>佇列是先進先出，也就是先進來的人先被服務。堆疊則是後進先出，最後放上去的元素最先被取走。兩者都不是在比誰高級，而是在不同情境下維持合理秩序。</p>
+        <blockquote>順序本身就是一種規則，而資料結構做的事，就是把規則變成可持續運作的安排方式。</blockquote>
+      </section>
+
+      <section>
+        <h2>這在生活中像什麼</h2>
+        <p>超市結帳隊伍、掛號系統、客服等待名單，都很像佇列。它強調公平與流程穩定。相反地，疊衣服、堆盤子、瀏覽器上一頁功能，則更接近堆疊，因為最近一次動作通常最容易被反向處理。</p>
+      </section>
+
+      <section>
+        <h2>這在工作上有什麼用</h2>
+        <p>客服工單若依進件順序處理，就是佇列思維；設計師的復原操作、文件編輯的撤銷紀錄，則常用堆疊思維。專案管理中，若遇到緊急事項插隊，還要再進一步搭配優先順序結構，單純佇列就可能不夠。</p>
+      </section>
+
+      <section>
+        <h2>為什麼重要</h2>
+        <ul>
+          <li>它幫助我們釐清流程規則應該怎麼設計。</li>
+          <li>它讓系統在處理大量請求時更一致、更可預期。</li>
+          <li>它提醒我們：不同工作情境，需要不同的順序邏輯。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>一句話總結</h2>
+        <p>佇列在乎先來後到，堆疊在乎最後一次動作；選對順序規則，流程才會順。</p>
+      </section>
+
+      <nav class="chapter-nav" aria-label="章節導覽">
+        <a class="button secondary" href="ch02.html">上一章</a>
+        <a class="button secondary" href="../toc.html">回目錄</a>
+        <a class="button primary" href="ch04.html">下一章</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>第 3 章開始把資料結構和流程設計直接連起來。</p>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
+  <script src="../script.js"></script>
+</body>
+</html>

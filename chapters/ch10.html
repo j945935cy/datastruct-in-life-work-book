@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 10 章｜搜尋、推薦與管理系統裡的資料結構</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="chapter" data-chapter="ch10">
+  <div class="progress-bar" aria-hidden="true"><span id="reading-progress"></span></div>
+  <header class="site-header"><div class="brand-block"><p class="eyebrow">Chapter 10</p><a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a></div><nav class="top-nav" aria-label="章節導覽"><a href="../toc.html">目錄</a><a href="../about.html">關於本書</a></nav><div class="reader-controls" aria-label="閱讀設定"><button type="button" data-action="font-down">A-</button><button type="button" data-action="font-up">A+</button><button type="button" data-action="toggle-theme">深色模式</button></div></header>
+  <main class="page-shell">
+    <article class="chapter-article">
+      <header class="chapter-header">
+        <p class="chapter-tag">Chapter 10</p>
+        <h1>搜尋、推薦與管理系統裡的資料結構</h1>
+        <p class="chapter-summary">系統之所以能快速搜尋、合理推薦與穩定管理資訊，背後往往是多種資料結構一起合作。真實世界很少只靠單一結構就能解決所有問題。</p>
+      </header>
+
+      <section>
+        <h2>本章開場</h2>
+        <p>你在購物網站打幾個字，商品就跳出來；在影音平台看完一部片，系統很快推薦下一部；在公司知識庫搜尋一個關鍵詞，文件與標籤立刻被帶出。這些體驗看起來順暢，但背後其實是很多資料結構一起分工。</p>
+      </section>
+
+      <section>
+        <h2>本章要解決的問題</h2>
+        <p>一個真實系統同時要面對查找、分類、排序、推薦、關聯與權限管理時，為什麼不能只靠一種資料結構？又該如何理解它們彼此之間的合作？</p>
+      </section>
+
+      <section>
+        <h2>核心概念</h2>
+        <p>前面章節介紹的每一種結構，都像一種工具。陣列適合位置明確的資料，字典與雜湊適合快速查找，樹狀結構適合分類導覽，圖形結構適合描述關係，堆積適合處理優先順序。實務系統通常不是選一個，而是同時用好幾個。</p>
+        <p>例如搜尋系統可能先靠索引快速找資料，再用排序規則決定顯示順序；推薦系統可能用圖找出相似關係，再用其他結構存使用者偏好；任務管理系統可能同時用樹管理專案層級、用佇列追工作流、用字典查任務狀態。</p>
+        <blockquote>真實系統不是資料結構單選題，而是根據問題把工具組合起來。</blockquote>
+        <p>這種組合思維很重要。因為使用者看到的是一個整體體驗，但背後其實是不同結構各自扮演不同角色。</p>
+      </section>
+
+      <section>
+        <h2>這在生活中像什麼</h2>
+        <p>百貨公司導覽不只是一張清單。它會先有樓層分類，再有店櫃位置，還可能提供搜尋與推薦。你走進一個大型活動現場，也會先看總圖，再看分區，再查節目表。這些資訊服務很少只有一種整理方式。</p>
+        <p>同樣地，外送平台不只要列餐廳，還要讓你能搜尋、篩選、推薦、排序與看到配送關係。這些需求本身就暗示了不同結構要一起工作。</p>
+      </section>
+
+      <section>
+        <h2>這在工作上有什麼用</h2>
+        <p>公司的 CRM、知識庫、ERP、客服平台、專案系統，幾乎都是資料結構的綜合應用。知識庫要有分類樹、搜尋索引、標籤字典與權限結構；客服平台要有工單佇列、客戶資料查找、急件優先排序與流程節點串接。</p>
+        <p>如果設計者只會用一種思路看待所有問題，系統往往會變得笨重。真正成熟的設計，是知道每個需求適合哪一種資料安排方式，再把它們串成一套使用者感受良好的流程。</p>
+      </section>
+
+      <section>
+        <h2>為什麼重要</h2>
+        <ul>
+          <li>它讓我們理解系統效能與體驗背後不是運氣，而是結構設計。</li>
+          <li>它幫助我們避免拿單一工具硬套所有問題。</li>
+          <li>它讓資料結構從單點知識，變成系統思維的一部分。</li>
+        </ul>
+        <p>取捨同樣存在。設計越多結構，實作與維護也會更複雜。所以真正的重點不是堆很多名詞，而是根據需求做合理配置。</p>
+      </section>
+
+      <section>
+        <h2>一句話總結</h2>
+        <p>好系統不是只會用一種資料結構，而是知道什麼問題該交給什麼工具。</p>
+      </section>
+
+      <nav class="chapter-nav" aria-label="章節導覽"><a class="button secondary" href="ch09.html">上一章</a><a class="button secondary" href="../toc.html">回目錄</a><a class="button primary" href="ch11.html">下一章</a></nav>
+    </article>
+  </main>
+  <footer class="site-footer"><p>第 10 章把前面分散的結構重新收束成系統視角。</p></footer>
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
+  <script src="../script.js"></script>
+</body>
+</html>

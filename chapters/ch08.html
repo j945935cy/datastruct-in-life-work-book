@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 8 章｜雜湊：為什麼有些查找就是特別快</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="chapter" data-chapter="ch08">
+  <div class="progress-bar" aria-hidden="true"><span id="reading-progress"></span></div>
+  <header class="site-header"><div class="brand-block"><p class="eyebrow">Chapter 08</p><a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a></div><nav class="top-nav" aria-label="章節導覽"><a href="../toc.html">目錄</a><a href="../about.html">關於本書</a></nav><div class="reader-controls" aria-label="閱讀設定"><button type="button" data-action="font-down">A-</button><button type="button" data-action="font-up">A+</button><button type="button" data-action="toggle-theme">深色模式</button></div></header>
+  <main class="page-shell">
+    <article class="chapter-article">
+      <header class="chapter-header">
+        <p class="chapter-tag">Chapter 08</p>
+        <h1>雜湊：為什麼有些查找就是特別快</h1>
+        <p class="chapter-summary">有些系統之所以能迅速找到資料，不是因為資料少，而是因為入口設計得好。雜湊的核心，就是讓你少走很多冤枉路。</p>
+      </header>
+
+      <section>
+        <h2>本章開場</h2>
+        <p>想像你到寄物櫃取行李，工作人員不是帶你一格一格找，而是直接告訴你在 27 號櫃。你之所以能快速拿到東西，不是因為櫃子少，而是因為已經有一個方法把你的資料對到正確位置。</p>
+      </section>
+
+      <section>
+        <h2>本章要解決的問題</h2>
+        <p>當資料非常多，而且我們常常要用一個識別值直接找到資料時，怎麼減少查找步驟，避免每次都從頭翻到尾？</p>
+      </section>
+
+      <section>
+        <h2>核心概念</h2>
+        <p>雜湊可以把它想成一種「快速分派地址」的方法。你輸入一個鍵，例如帳號、身分證字號、商品編碼，系統會根據一套規則，把它導向一個對應位置。理想狀況下，你就能很快找到資料。</p>
+        <p>這和字典概念相近，但更強調背後如何快速定位。它不是靠一筆一筆比對，而是靠鍵先被轉成適合索引的位置。真正的魔法不在資料本身，而在入口設計是否能讓資料迅速落到該去的地方。</p>
+        <blockquote>雜湊的價值，不是記住所有資料，而是讓資料幾乎能直達目的地。</blockquote>
+        <p>但天下沒有白吃的午餐。如果兩個不同鍵被分到同一位置，就會發生碰撞。這時候系統必須再想辦法處理衝突。因此，雜湊不是萬能快，而是有條件地快。</p>
+      </section>
+
+      <section>
+        <h2>這在生活中像什麼</h2>
+        <p>圖書館的索書號、寄物櫃編號、停車位號碼、聯絡人索引，都是類似的概念。你不是每次都把所有內容重新讀一遍，而是先靠一個關鍵入口縮小範圍。</p>
+        <p>當你手機輸入聯絡人姓名的前幾個字，系統幾乎立刻帶出候選結果，這也是在善用快速索引的思維。</p>
+      </section>
+
+      <section>
+        <h2>這在工作上有什麼用</h2>
+        <p>登入系統查詢帳號、內部系統以員工代碼找資料、商品平台用 SKU 查庫存、快取系統快速回應熱門資料，背後都常用到雜湊式設計。這類需求共同特徵是查得頻繁，而且不能每次都慢慢找。</p>
+        <p>在大型系統中，若沒有這類快速定位機制，查詢量一高就會拖垮體驗。雜湊讓很多「秒回」看起來理所當然，但其實背後是結構先鋪好了路。</p>
+      </section>
+
+      <section>
+        <h2>為什麼重要</h2>
+        <ul>
+          <li>它讓大量查詢可以維持很快的速度。</li>
+          <li>它非常適合以代碼、鍵值或識別碼查資料的場景。</li>
+          <li>它提醒我們，效率往往來自入口與索引的設計。</li>
+        </ul>
+        <p>限制在於碰撞與鍵規則。若鍵分布不好，大家都擠在幾個位置，速度就會掉下來。這也是為什麼雜湊不是只要會用就好，還得設計得好。</p>
+      </section>
+
+      <section>
+        <h2>一句話總結</h2>
+        <p>雜湊像替資料先分配好地址，讓查找不必每次都重新迷路。</p>
+      </section>
+
+      <nav class="chapter-nav" aria-label="章節導覽"><a class="button secondary" href="ch07.html">上一章</a><a class="button secondary" href="../toc.html">回目錄</a><a class="button primary" href="ch09.html">下一章</a></nav>
+    </article>
+  </main>
+  <footer class="site-footer"><p>第 8 章把「查得快」背後的入口設計講清楚了。</p></footer>
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
+  <script src="../script.js"></script>
+</body>
+</html>

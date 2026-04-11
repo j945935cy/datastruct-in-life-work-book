@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 4 章｜鏈結串列：彈性串接的思維</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body data-page="chapter" data-chapter="ch04">
+  <div class="progress-bar" aria-hidden="true"><span id="reading-progress"></span></div>
+  <header class="site-header">
+    <div class="brand-block"><p class="eyebrow">Chapter 04</p><a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a></div>
+    <nav class="top-nav" aria-label="章節導覽"><a href="../toc.html">目錄</a><a href="../about.html">關於本書</a></nav>
+    <div class="reader-controls" aria-label="閱讀設定"><button type="button" data-action="font-down">A-</button><button type="button" data-action="font-up">A+</button><button type="button" data-action="toggle-theme">深色模式</button></div>
+  </header>
+  <main class="page-shell">
+    <article class="chapter-article">
+      <header class="chapter-header">
+        <p class="chapter-tag">Chapter 04</p>
+        <h1>鏈結串列：彈性串接的思維</h1>
+        <p class="chapter-summary">不是所有資料都適合整整齊齊排成一列。當內容常常要插入、刪除、重接順序時，重點就不再是位置固定，而是彼此怎麼串起來。</p>
+      </header>
+
+      <section>
+        <h2>本章開場</h2>
+        <p>想像你正在安排一趟多站點的旅行。原本行程是台北、台中、台南、高雄，但朋友臨時建議你在中間加一站嘉義。若整份計畫是照固定格子排好，新增這一站可能得把後面全部重排；但如果你的安排方式是「這一站接下一站」，加進去就相對自然。</p>
+        <p>鏈結串列處理的，就是這種經常變動、需要重新串接的情境。</p>
+      </section>
+
+      <section>
+        <h2>本章要解決的問題</h2>
+        <p>當資料不是重點放在第幾格，而是重點放在前後關係時，我們該怎麼安排？尤其在中間插入新資料、移除舊資料很常發生時，固定位置式的結構就不一定理想。</p>
+      </section>
+
+      <section>
+        <h2>核心概念</h2>
+        <p>鏈結串列可以把每一筆資料想成一個節點，每個節點知道下一個節點是誰。資料不是靠固定位置排在一起，而是靠「連結」接在一起。這種方式的直覺很像接龍，一個接一個，順著線索往後走。</p>
+        <p>它的優點是調整彈性高。若你想在中間插入一筆資料，不一定需要把後面所有資料整批搬動，只要把前後連結重新接好即可。刪除資料時也是類似的思考：把原本通往它的路改接到下一個節點。</p>
+        <blockquote>鏈結串列不是在追求「一眼看到第幾格」，而是在追求「改動時不必整排重來」。</blockquote>
+        <p>但它也有代價。因為資料不是靠固定編號存取，你若想直接找到第 7 個節點，通常還是要從前面一路順著找過去。也就是說，它在彈性上有優勢，在快速定位特定位置上則不如陣列直觀。</p>
+      </section>
+
+      <section>
+        <h2>這在生活中像什麼</h2>
+        <p>旅行行程的中途加站、接龍式待辦安排、串珠手鍊的重新串接，都很像鏈結串列。這些情境的重點不在每個元素有固定編號，而在它和前後元素之間的連接關係。</p>
+        <p>再比如一份拜訪客戶的路線表，原本從 A 到 B 再到 C，但因為臨時改約，你要在 B 與 C 之間塞進 D。若你的安排方式本來就著重於「下一站是誰」，調整起來就比較自然。</p>
+      </section>
+
+      <section>
+        <h2>這在工作上有什麼用</h2>
+        <p>專案流程裡的審核節點、表單簽核順序、客服處理流程，有時會遇到臨時插入新步驟的需求。例如原本是「填單、主管核准、結案」，後來因稽核需求改成「填單、主管核准、財務覆核、結案」。這種流程的本質就很接近鏈結串列的思維。</p>
+        <p>另外在內容編排、教學流程設計、動態任務串接上，也常需要把某一步驟從中間抽出或插入。這時候若系統設計只仰賴固定位置，改動成本會變高；若改用串接關係來理解，思路通常更清楚。</p>
+      </section>
+
+      <section>
+        <h2>為什麼重要</h2>
+        <ul>
+          <li>它適合常常需要插入、刪除、重排的資料。</li>
+          <li>它提醒我們，資料的價值有時不在位置，而在彼此的關係。</li>
+          <li>它有助於理解流程節點、步驟串接與動態結構的設計方式。</li>
+        </ul>
+        <p>鏈結串列的限制也很值得記住。它不擅長像陣列那樣直接用編號快速跳到某個位置，所以在設計時必須先想清楚，自己更在意的是調整彈性，還是快速索引。</p>
+      </section>
+
+      <section>
+        <h2>一句話總結</h2>
+        <p>鏈結串列像一節接一節的安排方式，找特定位置不算快，但中途改路線時特別靈活。</p>
+      </section>
+
+      <nav class="chapter-nav" aria-label="章節導覽">
+        <a class="button secondary" href="ch03.html">上一章</a>
+        <a class="button secondary" href="../toc.html">回目錄</a>
+        <a class="button primary" href="ch05.html">下一章</a>
+      </nav>
+    </article>
+  </main>
+  <footer class="site-footer"><p>第 4 章補上了「固定位置」與「動態串接」之間的關鍵差異。</p></footer>
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
+  <script src="../script.js"></script>
+</body>
+</html>
