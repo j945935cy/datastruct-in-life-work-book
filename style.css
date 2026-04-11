@@ -102,8 +102,7 @@ main {
   margin: 0 0 6px;
   color: var(--muted);
   font-size: 0.78rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .brand {
@@ -258,9 +257,12 @@ main {
 .chapter-tag {
   margin: 0 0 8px;
   font-size: 0.82rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.08em;
   color: var(--muted);
+}
+
+.reader-controls button {
+  white-space: nowrap;
 }
 
 .preview-card a {
@@ -326,7 +328,7 @@ main {
 }
 
 .toc-list a[data-ready="true"]::after {
-  content: "已完成樣板";
+  content: "已完成內容";
   display: inline-flex;
   margin-left: 12px;
   padding: 2px 10px;
@@ -410,6 +412,7 @@ main {
 
 @media (max-width: 920px) {
   .site-header {
+    position: static;
     grid-template-columns: 1fr;
   }
 
@@ -426,6 +429,10 @@ main {
     font-size: calc(var(--base-font-size) - 1px);
   }
 
+  main {
+    padding: 28px 0 64px;
+  }
+
   .site-header,
   main,
   .site-footer {
@@ -438,6 +445,7 @@ main {
   .card,
   .preview-card,
   .reading-note,
+  .status-card,
   .toc-list a {
     padding: 20px;
   }
