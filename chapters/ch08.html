@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>第 8 章｜雜湊：為什麼有些查找就是特別快</title>
+  <meta property="og:title" content="第 8 章｜雜湊與雜湊表：為什麼有些查找就是特別快">
+  <meta property="og:description" content="有些系統之所以能迅速找到資料，不是因為資料少，而是因為入口設計得好。雜湊的核心，就是讓你少走很多冤枉路。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://j945935cy.github.io/datastruct-in-life-work-book/chapters/ch08.html">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page="chapter" data-chapter="ch08">
@@ -30,12 +34,16 @@
       <header class="chapter-header">
         <p class="chapter-tag">第 8 章</p>
         <h1>雜湊：為什麼有些查找就是特別快</h1>
-        <p class="chapter-summary">有些系統之所以能迅速找到資料，不是因為資料少，而是因為入口設計得好。雜湊的核心，就是讓你少走很多冤枉路。</p>
-      </header>
+        <p class="chapter-summary">有些系統之所以能迅速找到資料，不是因為資料少，而是因為入口設計得好。雜湊的核心，就是讓你少走很多冤枉路。</p>        <p class="chapter-en-term">Hash Table</p>
+        <p class="reading-time">預計閱讀時間：約 5 分鐘</p>
+        <div class="audience-tags" aria-label="適合讀者">
+          <span class="audience-tag">系統設計</span>
+          <span class="audience-tag">資料管理</span>
+        </div>      </header>
 
       <section id="intro">
         <h2>本章開場</h2>
-        <p>想像你到寄物櫃取行李，工作人員不是帶你一格一格找，而是直接告訴你在 27 號櫃。你之所以能快速拿到東西，不是因為櫃子少，而是因為已經有一個方法把你的資料對到正確位置。</p>
+        <p>想像你到寄物櫃取行李，工作人員不是帶你一格一格找，而是直接告訴你在 27 號櫃。你之所以能快速拿到東西，不是因為櫃子少，而是因為已經有一個方法把你的資料對到正確位置——這就是<dfn>雜湊</dfn>的核心構想。</p>
       </section>
 
       <section id="problem">
@@ -122,6 +130,20 @@
         <h2>一句話總結</h2>
         <p>雜湊像替資料先分配好地址，讓查找不必每次都重新迷路。</p>
       </section>
+
+      <div class="review-questions">
+        <h3>💭 捲輊三問</h3>
+        <ol>
+          <li>你現在有沒有哪個「快速查找」的需求，可能已經在背後用了雜湊機制？</li>
+          <li>雜湊需要事先「分配位置」，這讓你想到什麼實體生活場景？</li>
+          <li>如果資料量很小，直接一一比對也沒什麼關係——那你會用什麼標準決定要不要引入雜湊？</li>
+        </ol>
+      </div>
+
+      <div class="next-chapter-preview">
+        <span class="ncp-label">下一章</span>
+        <p>如果查找很快，但事情還有輕重緩急怎辦？<strong>堆積</strong>讓你永遠先拿到最重要的那一筆。</p>
+      </div>
 
       <nav class="chapter-nav" aria-label="章節導覽">
         <a class="button secondary" href="ch07.html">上一章</a>

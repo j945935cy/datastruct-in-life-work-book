@@ -130,12 +130,37 @@
   function updateReadingStatus() {
     const savedChapter = storageGet(chapterStorageKey);
     const lastReadLabel = document.getElementById("last-read-label");
-    const availableLabel = document.getElementById("available-label");
 
-    if (availableLabel) {
-      const readyCount = document.querySelectorAll("[data-ready='true']").length;
-      const totalCount = document.querySelectorAll("[data-chapter-link]").length;
-      availableLabel.textContent = `${readyCount} / ${totalCount} 章完成第一版內容`;
+    // TOC progress bar
+    const progressTrack = document.getElementById("toc-progress-bar");
+    const progressLabel = document.getElementById("toc-progress-label");
+    if (progressTrack || progressLabel) {
+      const totalItems = document.querySelectorAll("[data-chapter-link]").length || 12;
+      let readCount = 0;
+      if (savedChapter) {
+        const match = savedChapter.match(/ch(\d+)/);
+        if (match) readCount = Math.min(parseInt(match[1], 10), totalItems);
+      }
+      const pct = totalItems > 0 ? Math.round((readCount / totalItems) * 100) : 0;
+      if (progressTrack) progressTrack.style.width = pct + "%";
+      if (progressLabel) progressLabel.textContent = readCount + " / " + totalItems + " 章";
+    }
+
+    // TOC search filter
+    const searchInput = document.getElementById("toc-search-input");
+    const tocList = document.getElementById("toc-list");
+    if (searchInput && tocList) {
+      searchInput.addEventListener("input", function () {
+        const q = this.value.toLowerCase().trim();
+        tocList.querySelectorAll("li").forEach(function (li) {
+          if (!q) {
+            li.style.display = "";
+            return;
+          }
+          const title = (li.querySelector("a[data-chapter-title]") || {}).dataset?.chapterTitle || li.textContent;
+          li.style.display = title.toLowerCase().includes(q) ? "" : "none";
+        });
+      });
     }
 
     if (!lastReadLabel) {

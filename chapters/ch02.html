@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="陣列是最直觀的資料結構：按位置編號排列、存取快，但插入刪除得移動整排。從蛋盒到課表，我們日常早已在用。">
+  <meta property="og:title" content="第 2 章：陣列 | 資料怎麼排，事情就怎麼順">
+  <meta property="og:description" content="陣列是最直觀的資料結構：按位置編號排列、存取快，但插入刪除得移動整排。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://j945935cy.github.io/datastruct-in-life-work-book/chapters/ch02.html">
   <title>第 2 章｜陣列：把東西整整齊齊排好</title>
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -35,11 +39,15 @@
         <p class="chapter-summary">當資料有固定順序、數量可預期，而且我們常常要依位置快速取得內容時，陣列會是一種很直觀的安排方式。</p>
         <p class="chapter-en-term">Array</p>
         <p class="reading-time">預計閱讀時間：約 5 分鐘</p>
+        <div class="audience-tags" aria-label="適合讀者">
+          <span class="audience-tag">行政管理</span>
+          <span class="audience-tag">教育工作者</span>
+        </div>
       </header>
 
       <section id="intro">
         <h2>本章開場</h2>
-        <p>你在超商買了 12 入的蛋盒，每一顆蛋都有固定位置。要拿第 3 顆蛋，不需要翻遍整盒，只要看位置就好。這就是陣列最直觀的感覺：資料排成一列，而且每個位置都有編號。</p>
+        <p>你在超商買了 12 入的蛋盒，每一顆蛋都有固定位置。要拿第 3 顆蛋，不需要翻遍整盒，只要看位置就好。這就是<dfn>陣列</dfn>最直觀的感覺：資料排成一列，而且每個位置都有編號。</p>
       </section>
 
       <section id="problem">
@@ -123,6 +131,20 @@
         <h2>一句話總結</h2>
         <p>陣列像一排編好號的格子，拿東西很快，但中途改位置時就沒那麼輕鬆。</p>
       </section>
+
+      <div class="review-questions">
+        <h3>💭 捲輊三問</h3>
+        <ol>
+          <li>你生活或工作中有哪個場景，是像陣列一樣「固定順序、按位置取用」的？</li>
+          <li>如果有人要在你的行程表中間插入一個臨時會議，整體安排會如何被影響？</li>
+          <li>陣列的「改動代價」讓你想到生活中哪一種管理上的限制？</li>
+        </ol>
+      </div>
+
+      <div class="next-chapter-preview">
+        <span class="ncp-label">下一章</span>
+        <p>有時候資料不只要整齊，還要按照「先來後到」或「最後放的最先拿」的順序處理——<strong>佇列與堆疊</strong>登場。</p>
+      </div>
 
       <nav class="chapter-nav" aria-label="章節導覽">
         <a class="button secondary" href="ch01.html">上一章</a>

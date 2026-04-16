@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>第 5 章｜集合與字典：快速分組與查找</title>
+  <meta property="og:title" content="第 5 章｜集合與字典：快速分組與查找">
+  <meta property="og:description" content="當你想知道某個値有沒有出現過，或想用一個鍵快速找到對應資料時，集合與字典就很實用。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://j945935cy.github.io/datastruct-in-life-work-book/chapters/ch05.html">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page="chapter" data-chapter="ch05">
@@ -30,12 +34,16 @@
       <header class="chapter-header">
         <p class="chapter-tag">第 5 章</p>
         <h1>集合與字典：快速分組與查找</h1>
-        <p class="chapter-summary">當你想知道某個值有沒有出現過，或想用一個鍵快速找到對應資料時，集合與字典就很實用。它們看似平凡，卻幾乎每天都在幫我們省時間。</p>
-      </header>
+        <p class="chapter-summary">當你想知道某個值有沒有出現過，或想用一個鍵快速找到對應資料時，集合與字典就很實用。它們看似平凡，卻幾乎每天都在幫我們省時間。</p>        <p class="chapter-en-term">Set &amp; Dictionary</p>
+        <p class="reading-time">預計閱讀時間：約 5 分鐘</p>
+        <div class="audience-tags" aria-label="適合讀者">
+          <span class="audience-tag">數據分析</span>
+          <span class="audience-tag">行政管理</span>
+        </div>      </header>
 
       <section id="intro">
         <h2>本章開場</h2>
-        <p>你正在整理聯絡人名單，突然發現同一個人被輸入了三次。另一邊，主管又要你立刻查出員工編號 A173 對應的是誰。這兩件事看起來不同，但背後都指向同一個需求：要嘛快速判斷某筆資料是否存在，要嘛快速用一個代號找到對應內容。</p>
+        <p>你正在整理聯絡人名單，突然發現同一個人被輸入了三次。另一邊，主管又要你立刻查出員工編號 A173 對應的是誰。這兩件事看起來不同，但背後都指向同一個需求：要嘛快速判斷某筆資料是否存在（這是<dfn>集合</dfn>的工作），要嘛快速用一個代號找到對應內容（這是<dfn>字典</dfn>的工作）。</p>
       </section>
 
       <section id="problem">
@@ -129,6 +137,20 @@
         <h2>一句話總結</h2>
         <p>集合幫你判斷有沒有重複，字典幫你用一個鍵快速找到答案。</p>
       </section>
+
+      <div class="review-questions">
+        <h3>💭 捲輊三問</h3>
+        <ol>
+          <li>你現在的工作有沒有「快速確認某個人或事項是否存在」的需求？它用哪種方式在做？</li>
+          <li>字典的「keyValue」概念對你來說，最像生活中的哪個場景？</li>
+          <li>如果要設計一個「快速查詢客戶資料」的系統，你會選擇什麼結構來存它？</li>
+        </ol>
+      </div>
+
+      <div class="next-chapter-preview">
+        <span class="ncp-label">下一章</span>
+        <p>當資料有上下層關係，<strong>樹狀結構</strong>讓你在複雜資訊中看到清晰的層次。</p>
+      </div>
 
       <nav class="chapter-nav" aria-label="章節導覽">
         <a class="button secondary" href="ch04.html">上一章</a>

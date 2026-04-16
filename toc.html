@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="全書 12 章目錄，從資料結構為何重要談起，再一路走到搜尋、推薦與工作現場的應用。">
+  <meta property="og:title" content="目錄 | 資料怎麼排，事情就怎麼順">
+  <meta property="og:description" content="全書 12 章目錄，從資料結構為何重要談起，再一路走到搜尋、推薦與工作現場的應用。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://j945935cy.github.io/datastruct-in-life-work-book/toc.html">
   <title>目錄 | 資料怎麼排，事情就怎麼順</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -40,9 +45,10 @@
         <p id="last-read-label">尚未開始閱讀</p>
       </article>
       <article class="status-card">
-        <p class="eyebrow">第一版完成度</p>
-        <h2>目前可直接細讀</h2>
-        <p id="available-label">12 / 12 章完成第一版內容</p>
+        <p class="eyebrow">閱讀進度</p>
+        <h2>已讀完章節</h2>
+        <div class="reading-progress-bar"><span id="toc-progress-bar"></span></div>
+        <p class="reading-progress-label" id="toc-progress-label">0 / 12 章</p>
       </article>
       <article class="status-card">
         <p class="eyebrow">建議起點</p>
@@ -56,7 +62,11 @@
       <p>全書 12 章皆已補成可閱讀版本，可直接作為第一版靜態電子書內容使用。</p>
     </section>
 
-    <ol class="toc-list">
+    <div class="toc-search">
+      <input type="search" id="toc-search-input" placeholder="搜尋章節關鍵字…" aria-label="搜尋章節">
+    </div>
+
+    <ol class="toc-list" id="toc-list">
       <li><a href="chapters/ch01.html" data-chapter-link="ch01" data-chapter-title="為什麼一般人也要懂資料結構" data-ready="true">為什麼一般人也要懂資料結構</a></li>
       <li><a href="chapters/ch02.html" data-chapter-link="ch02" data-chapter-title="陣列：把東西整整齊齊排好" data-ready="true">陣列：把東西整整齊齊排好</a></li>
       <li><a href="chapters/ch03.html" data-chapter-link="ch03" data-chapter-title="堆疊與佇列：排隊、疊放與流程順序" data-ready="true">堆疊與佇列：排隊、疊放與流程順序</a></li>

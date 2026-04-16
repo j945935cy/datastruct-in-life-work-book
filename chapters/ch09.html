@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>第 9 章｜堆積：優先順序與資源分配</title>
+  <meta property="og:title" content="第 9 章｜堆積：優先順序與資源分配">
+  <meta property="og:description" content="當事情不是照先來後到，而是照重要程度安排時，就需要一種懂得排優先序的結構。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://j945935cy.github.io/datastruct-in-life-work-book/chapters/ch09.html">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page="chapter" data-chapter="ch09">
@@ -31,11 +35,17 @@
         <p class="chapter-tag">第 9 章</p>
         <h1>堆積：優先順序與資源分配</h1>
         <p class="chapter-summary">當事情不是照先來後到，而是照重要程度安排時，就需要一種懂得排優先序的結構。這種思維，正是很多排程與資源管理系統的核心。</p>
+        <p class="chapter-en-term">Heap / Priority Queue</p>
+        <p class="reading-time">預計閱讀時間：約 5 分鐘</p>
+        <div class="audience-tags" aria-label="適合讀者">
+          <span class="audience-tag">資源調度</span>
+          <span class="audience-tag">決策管理</span>
+        </div>
       </header>
 
       <section id="intro">
         <h2>本章開場</h2>
-        <p>急診室不可能照報到順序處理所有病人，消防通報也不會因為先打進來就先處理。如果事情的處理順序要看嚴重程度、緊急性或影響範圍，那麼單純排隊已經不夠。</p>
+        <p>急診室不可能照報到順序處理所有病人，消防通報也不會因為先打進來就先處理。如果事情的處理順序要看嚴重程度、緊急性或影響範圍，那麼單純排隊已經不夠——這時就需要<dfn>堆積</dfn>來確保每次最重要的任務優先處理。</p>
       </section>
 
       <section id="problem">
@@ -124,8 +134,21 @@
         <p>堆積像一個會自動把重點推到前面的機制，讓重要的事不會被埋沒。</p>
       </section>
 
+      <div class="review-questions">
+        <h3>💭 捲輊三問</h3>
+        <ol>
+          <li>你的工作任務清單，有沒有按照「緊急程度」排序？還是全部混在一起？</li>
+          <li>如果你是急診室護理師，你用什麼邏輯決定誰先看？這個邏輯符合堆積的概念嗎？</li>
+          <li>堆積每次只保證「頂端是最重要的」，你覺得這對你的每日工作計畫有什麼啟發？</li>
+        </ol>
+      </div>
+
+      <div class="next-chapter-preview">
+        <span class="ncp-label">下一章</span>
+        <p>各種結構都學完了，真實系統是怎麼把它們<strong>組合起來</strong>協同運作的？</p>
+      </div>
+
       <nav class="chapter-nav" aria-label="章節導覽">
-        <a class="button secondary" href="ch08.html">上一章</a>
         <a class="button secondary" href="../toc.html">回目錄</a>
         <a class="button primary" href="ch10.html">下一章</a>
       </nav>

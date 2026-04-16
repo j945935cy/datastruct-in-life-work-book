@@ -433,6 +433,142 @@ main {
   font-style: italic;
 }
 
+/* Audience tags */
+.audience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 0;
+}
+
+.audience-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+  font-size: 0.76rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+/* Next chapter preview */
+.next-chapter-preview {
+  margin: 28px 0 8px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.next-chapter-preview .ncp-label {
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.next-chapter-preview p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Review questions */
+.review-questions {
+  margin: 28px 0;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.review-questions h3 {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+  letter-spacing: 0.04em;
+}
+
+.review-questions ol {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.review-questions ol li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* dfn term highlighting */
+dfn {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--accent-strong);
+  border-bottom: 2px solid var(--accent-soft);
+  text-decoration: none;
+}
+
+/* TOC search bar */
+.toc-search {
+  margin: 20px 0 0;
+  position: relative;
+}
+
+.toc-search input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.toc-search input:focus {
+  border-color: var(--accent);
+}
+
+.toc-search input::placeholder {
+  color: var(--muted);
+}
+
+/* TOC progress */
+.reading-progress-bar {
+  margin: 8px 0 0;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.reading-progress-bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  transition: width 0.4s ease;
+}
+
+.reading-progress-label {
+  margin: 6px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
 .site-footer {
   padding: 0 0 72px;
   color: var(--muted);
@@ -498,5 +634,65 @@ main {
   .status-card,
   .toc-list a {
     padding: 20px;
+  }
+}
+
+@media print {
+  .progress-bar,
+  .site-header,
+  .site-footer,
+  .chapter-nav,
+  .back-to-top,
+  .reader-controls,
+  .next-chapter-preview,
+  .review-questions {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+
+  .chapter-article {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chapter-header {
+    border-bottom: 1pt solid #ccc;
+  }
+
+  .chapter-article blockquote {
+    border-color: #888;
+    background: #f5f5f5;
+  }
+
+  .chapter-figure svg {
+    border: 1pt solid #ddd;
+    background: white;
+  }
+
+  a {
+    text-decoration: underline;
+    color: black;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  section {
+    page-break-inside: avoid;
   }
 }

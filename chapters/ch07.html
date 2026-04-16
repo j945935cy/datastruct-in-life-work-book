@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="圖形結構描述的不是層級，而是任意點與點之間的連結關係。捕贴路線、社群網絡、任務依賴，都是圖的屏展。">
+  <meta property="og:title" content="第 7 章：圖形結構 | 資料怎麼排，事情就怎麼順">
+  <meta property="og:description" content="圖形結構描述的不是層級，而是任意點與點之間的連結關係。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://j945935cy.github.io/datastruct-in-life-work-book/chapters/ch07.html">
   <title>第 7 章｜圖形結構：人際關係、交通路線與網路世界</title>
   <link rel="stylesheet" href="../style.css">
 </head>
@@ -34,11 +38,15 @@
         <p class="chapter-summary">當資料重點不在層級，而在彼此的連結關係時，圖形結構會比樹更貼近真實世界。很多你以為只是「網路」的東西，本質上其實都是圖。</p>
         <p class="chapter-en-term">Graph</p>
         <p class="reading-time">預計閱讀時間：約 7 分鐘</p>
+        <div class="audience-tags" aria-label="適合讀者">
+          <span class="audience-tag">關係管理</span>
+          <span class="audience-tag">營運規劃</span>
+        </div>
       </header>
 
       <section id="intro">
         <h2>本章開場</h2>
-        <p>如果你想從台北車站搭車去淡水，中間會經過哪些站？如果你想知道某位朋友和另一位朋友之間有沒有共同認識的人，又該怎麼想？這些問題都不是在問上下層級，而是在問「誰跟誰連在一起」。</p>
+        <p>如果你想從台北車站搭車去淡水，中間會經過哪些站？如果你想知道某位朋友和另一位朋友之間有沒有共同認識的人，又該怎麼想？這些問題都不是在問上下層級，而是在問「誰跟誰連在一起」——這正是<dfn>圖形結構</dfn>擅長表達的世界。</p>
       </section>
 
       <section id="problem">
@@ -187,6 +195,20 @@
         <h2>一句話總結</h2>
         <p>當你要理解的是「誰跟誰有關」，圖形結構會比分類表更接近真相。</p>
       </section>
+
+      <div class="review-questions">
+        <h3>💭 捲輊三問</h3>
+        <ol>
+          <li>你的工作或生活中有沒有一張「關係圖」——人和人、地點和地點之間的連結？把它畫出來。</li>
+          <li>圖形和樹狀的主要差異是「可以有環路」，這讓你想到什麼現實場景？</li>
+          <li>如果你要描述你們部門的溝通路徑，它比較像樹（有明確層級）還是圖（任意連結）？</li>
+        </ol>
+      </div>
+
+      <div class="next-chapter-preview">
+        <span class="ncp-label">下一章</span>
+        <p>不要逐一比對、不要一層一層找——<strong>雜湊</strong>讓查找幾乎不花時間。</p>
+      </div>
 
       <nav class="chapter-nav" aria-label="章節導覽">
         <a class="button secondary" href="ch06.html">上一章</a>
