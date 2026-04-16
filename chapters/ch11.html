@@ -7,8 +7,24 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page="chapter" data-chapter="ch11">
-  <div class="progress-bar" aria-hidden="true"><span id="reading-progress"></span></div>
-  <header class="site-header"><div class="brand-block"><p class="eyebrow">第 11 章</p><a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a></div><nav class="top-nav" aria-label="章節導覽"><a href="../toc.html">目錄</a><a href="../about.html">關於本書</a></nav><div class="reader-controls" aria-label="閱讀設定"><button type="button" data-action="font-down">A-</button><button type="button" data-action="font-up">A+</button><button type="button" data-action="toggle-theme">深色模式</button></div></header>
+  <div class="progress-bar" aria-hidden="true">
+    <span id="reading-progress"></span>
+  </div>
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">第 11 章</p>
+      <a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a>
+    </div>
+    <nav class="top-nav" aria-label="章節導覽">
+      <a href="../toc.html">目錄</a>
+      <a href="../about.html">關於本書</a>
+    </nav>
+    <div class="reader-controls" aria-label="閱讀設定">
+      <button type="button" data-action="font-down">A-</button>
+      <button type="button" data-action="font-up">A+</button>
+      <button type="button" data-action="toggle-theme">深色模式</button>
+    </div>
+  </header>
   <main class="page-shell">
     <article class="chapter-article">
       <header class="chapter-header">
@@ -38,6 +54,14 @@
         <h2>這在生活中像什麼</h2>
         <p>家務分工會有待辦清單、輪值順序、收納分類與緊急事項處理。家庭行程安排會有日期欄位、群組對照、提醒順序與重要度排序。這些都和工作很像，只是規模比較小。</p>
         <p>也因此，資料結構不是冷冰冰的專業名詞，而是每個人都能從既有經驗連回去理解的東西。</p>
+        <h3>具體例子</h3>
+        <ol>
+          <li><strong>老師的教材資料夾：</strong>「課程 → 年度 → 單元 → 每節講義檔」——這就是樹狀結構，很多老師已經在用，只是不知道這個名字。</li>
+          <li><strong>行政助理的請款流程：</strong>從填單、逐層送核、層層審核，到最後結案，是佇列加上連結串列的結合——不能跳順序，也可以插入新步驟。</li>
+          <li><strong>業務員的客戶名單：</strong>客戶編號對應姓名、購買記錄、訂單狀態，就是字典結構已經在試算表裡日夜運作了，只是很少人用這個角度描述。</li>
+          <li><strong>公共報修系統的工單佇列：</strong>居民陸續報修路溝、路燈故障、倒塌樹枝，報即進佇列、按緩急程度安排工人處理，其實就是地方政府在用佇列加堆積思維管理城市維修。</li>
+          <li><strong>網路平台的標籤系統：</strong>Instagram／YouTube 的內容標籤就是集合，確保每個標籤唯一記錄一次，不重複計算，龐大內容因此能快速、準確地篩選出相關內容。</li>
+        </ol>
       </section>
 
       <section>
@@ -61,10 +85,16 @@
         <p>你不一定叫得出名字，但工作裡早就在不斷使用資料結構。</p>
       </section>
 
-      <nav class="chapter-nav" aria-label="章節導覽"><a class="button secondary" href="ch10.html">上一章</a><a class="button secondary" href="../toc.html">回目錄</a><a class="button primary" href="ch12.html">下一章</a></nav>
+      <nav class="chapter-nav" aria-label="章節導覽">
+        <a class="button secondary" href="ch10.html">上一章</a>
+        <a class="button secondary" href="../toc.html">回目錄</a>
+        <a class="button primary" href="ch12.html">下一章</a>
+      </nav>
     </article>
   </main>
-  <footer class="site-footer"><p>第 11 章把全書重新拉回一般工作者的日常現場。</p></footer>
+  <footer class="site-footer">
+    <p>第 11 章把全書重新拉回一般工作者的日常現場。</p>
+  </footer>
   <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
   <script src="../script.js"></script>
 </body>

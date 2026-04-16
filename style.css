@@ -383,6 +383,18 @@ main {
   padding-left: 24px;
 }
 
+.chapter-article h3 {
+  margin: 20px 0 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+  letter-spacing: 0.02em;
+}
+
+.chapter-article ol li {
+  margin-bottom: 6px;
+}
+
 .site-footer {
   padding: 0 0 72px;
   color: var(--muted);

@@ -7,8 +7,24 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page="chapter" data-chapter="ch07">
-  <div class="progress-bar" aria-hidden="true"><span id="reading-progress"></span></div>
-  <header class="site-header"><div class="brand-block"><p class="eyebrow">第 7 章</p><a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a></div><nav class="top-nav" aria-label="章節導覽"><a href="../toc.html">目錄</a><a href="../about.html">關於本書</a></nav><div class="reader-controls" aria-label="閱讀設定"><button type="button" data-action="font-down">A-</button><button type="button" data-action="font-up">A+</button><button type="button" data-action="toggle-theme">深色模式</button></div></header>
+  <div class="progress-bar" aria-hidden="true">
+    <span id="reading-progress"></span>
+  </div>
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">第 7 章</p>
+      <a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a>
+    </div>
+    <nav class="top-nav" aria-label="章節導覽">
+      <a href="../toc.html">目錄</a>
+      <a href="../about.html">關於本書</a>
+    </nav>
+    <div class="reader-controls" aria-label="閱讀設定">
+      <button type="button" data-action="font-down">A-</button>
+      <button type="button" data-action="font-up">A+</button>
+      <button type="button" data-action="toggle-theme">深色模式</button>
+    </div>
+  </header>
   <main class="page-shell">
     <article class="chapter-article">
       <header class="chapter-header">
@@ -39,6 +55,14 @@
         <h2>這在生活中像什麼</h2>
         <p>捷運轉乘圖是一個很典型的例子。站點是節點，站與站之間的軌道是連線。你查路線時，不是在看層級，而是在找一條可行的路。社群關係也一樣，你和朋友、朋友的朋友，彼此之間形成一張關係網。</p>
         <p>地圖導航、推薦餐廳、找共同好友，甚至安排送貨路線，本質上都在處理節點之間的關係與路徑。</p>
+        <h3>具體例子</h3>
+        <ol>
+          <li><strong>捷運路線圖：</strong>每個站是節點，軌道是連線。搜尋「台北車站到淡水」最快路徑，就是在圖上暫覽遊歷，找出換乘次數最少、時間最短的路徑。</li>
+          <li><strong>LINE 共同好友推薦：</strong>「你認識的人」功能就是圖概念。A 認識 B，B 也認識 C，就對 A 推薦 C，對應的是圖中的「共同鄰居」或「距離為 2 的節點」。</li>
+          <li><strong>電商平台商品關聯推薦：</strong>「買了這個的人也買了那個」，是商品被視如節點、購買行為被視如連線的圖結構。</li>
+          <li><strong>停車場空位導引：</strong>停車場入口、各樓層、各區域都是節點，出口、電梯、樓梯是連線；導引系統幫你找距入口最近的空位，本質上是在圖上找最短路徑。</li>
+          <li><strong>專案任務前置依賴：</strong>任務 A 完成後才能開始任務 B 和 C，B 完成後才能開始 D。這些前置依賴關係用圖來表示，遠比簡單的線性清單更清楚。</li>
+        </ol>
       </section>
 
       <section>
@@ -62,10 +86,16 @@
         <p>當你要理解的是「誰跟誰有關」，圖形結構會比分類表更接近真相。</p>
       </section>
 
-      <nav class="chapter-nav" aria-label="章節導覽"><a class="button secondary" href="ch06.html">上一章</a><a class="button secondary" href="../toc.html">回目錄</a><a class="button primary" href="ch08.html">下一章</a></nav>
+      <nav class="chapter-nav" aria-label="章節導覽">
+        <a class="button secondary" href="ch06.html">上一章</a>
+        <a class="button secondary" href="../toc.html">回目錄</a>
+        <a class="button primary" href="ch08.html">下一章</a>
+      </nav>
     </article>
   </main>
-  <footer class="site-footer"><p>第 7 章讓資料結構從層級世界走進關係世界。</p></footer>
+  <footer class="site-footer">
+    <p>第 7 章讓資料結構從層級世界走進關係世界。</p>
+  </footer>
   <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
   <script src="../script.js"></script>
 </body>

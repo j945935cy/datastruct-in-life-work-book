@@ -7,8 +7,24 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page="chapter" data-chapter="ch10">
-  <div class="progress-bar" aria-hidden="true"><span id="reading-progress"></span></div>
-  <header class="site-header"><div class="brand-block"><p class="eyebrow">第 10 章</p><a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a></div><nav class="top-nav" aria-label="章節導覽"><a href="../toc.html">目錄</a><a href="../about.html">關於本書</a></nav><div class="reader-controls" aria-label="閱讀設定"><button type="button" data-action="font-down">A-</button><button type="button" data-action="font-up">A+</button><button type="button" data-action="toggle-theme">深色模式</button></div></header>
+  <div class="progress-bar" aria-hidden="true">
+    <span id="reading-progress"></span>
+  </div>
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">第 10 章</p>
+      <a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a>
+    </div>
+    <nav class="top-nav" aria-label="章節導覽">
+      <a href="../toc.html">目錄</a>
+      <a href="../about.html">關於本書</a>
+    </nav>
+    <div class="reader-controls" aria-label="閱讀設定">
+      <button type="button" data-action="font-down">A-</button>
+      <button type="button" data-action="font-up">A+</button>
+      <button type="button" data-action="toggle-theme">深色模式</button>
+    </div>
+  </header>
   <main class="page-shell">
     <article class="chapter-article">
       <header class="chapter-header">
@@ -39,6 +55,14 @@
         <h2>這在生活中像什麼</h2>
         <p>百貨公司導覽不只是一張清單。它會先有樓層分類，再有店櫃位置，還可能提供搜尋與推薦。你走進一個大型活動現場，也會先看總圖，再看分區，再查節目表。這些資訊服務很少只有一種整理方式。</p>
         <p>同樣地，外送平台不只要列餐廳，還要讓你能搜尋、篩選、推薦、排序與看到配送關係。這些需求本身就暗示了不同結構要一起工作。</p>
+        <h3>具體例子</h3>
+        <ol>
+          <li><strong>Netflix 視音平台：</strong>內容分類用樹狀結構，使用者觀看記錄用字典儲存，推薦引擎用圖連結相似內容，熱門內容排行用堆積改善顯示順序——四種結構各司其職。</li>
+          <li><strong>Google Maps 搜尋路線：</strong>地圖資料用圖表示道路連結，趕路時間用優先佇列計算最短路徑，區域索引用雜湊加速尋址，廣告點分類用樹狀結構管理，是最具代表性的多結構結合。</li>
+          <li><strong>公司 CRM 系統：</strong>客戶資料用字典快速查尋，洽商互動歷程用連結串列保留順序，客戶分類用樹狀分層，高價值客戶用堆積式排序追蹤 VIP——這就是一個平凡日常工具背後的引擎。</li>
+          <li><strong>專案管理平臺（如 Jira）：</strong>專案與子任務用樹狀結構展開，任務流動用佇列按流程走，命名／標籤／狀態用字典查詢，緊急標記用堆積式排序推到首位。</li>
+          <li><strong>圖書館經典搜尋機制：</strong>索引用字典／雜湊定位記錄位置，分類用樹狀結構指引主題，相關書目用圖連結，新資料優先顯示用堆積避免被埋沒，同樣是多結構共同支撐一個服務。</li>
+        </ol>
       </section>
 
       <section>
@@ -62,10 +86,16 @@
         <p>好系統不是只會用一種資料結構，而是知道什麼問題該交給什麼工具。</p>
       </section>
 
-      <nav class="chapter-nav" aria-label="章節導覽"><a class="button secondary" href="ch09.html">上一章</a><a class="button secondary" href="../toc.html">回目錄</a><a class="button primary" href="ch11.html">下一章</a></nav>
+      <nav class="chapter-nav" aria-label="章節導覽">
+        <a class="button secondary" href="ch09.html">上一章</a>
+        <a class="button secondary" href="../toc.html">回目錄</a>
+        <a class="button primary" href="ch11.html">下一章</a>
+      </nav>
     </article>
   </main>
-  <footer class="site-footer"><p>第 10 章把前面分散的結構重新收束成系統視角。</p></footer>
+  <footer class="site-footer">
+    <p>第 10 章把前面分散的結構重新收束成系統視角。</p>
+  </footer>
   <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
   <script src="../script.js"></script>
 </body>

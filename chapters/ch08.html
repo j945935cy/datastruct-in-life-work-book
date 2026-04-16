@@ -7,8 +7,24 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page="chapter" data-chapter="ch08">
-  <div class="progress-bar" aria-hidden="true"><span id="reading-progress"></span></div>
-  <header class="site-header"><div class="brand-block"><p class="eyebrow">第 8 章</p><a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a></div><nav class="top-nav" aria-label="章節導覽"><a href="../toc.html">目錄</a><a href="../about.html">關於本書</a></nav><div class="reader-controls" aria-label="閱讀設定"><button type="button" data-action="font-down">A-</button><button type="button" data-action="font-up">A+</button><button type="button" data-action="toggle-theme">深色模式</button></div></header>
+  <div class="progress-bar" aria-hidden="true">
+    <span id="reading-progress"></span>
+  </div>
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">第 8 章</p>
+      <a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a>
+    </div>
+    <nav class="top-nav" aria-label="章節導覽">
+      <a href="../toc.html">目錄</a>
+      <a href="../about.html">關於本書</a>
+    </nav>
+    <div class="reader-controls" aria-label="閱讀設定">
+      <button type="button" data-action="font-down">A-</button>
+      <button type="button" data-action="font-up">A+</button>
+      <button type="button" data-action="toggle-theme">深色模式</button>
+    </div>
+  </header>
   <main class="page-shell">
     <article class="chapter-article">
       <header class="chapter-header">
@@ -39,6 +55,14 @@
         <h2>這在生活中像什麼</h2>
         <p>圖書館的索書號、寄物櫃編號、停車位號碼、聯絡人索引，都是類似的概念。你不是每次都把所有內容重新讀一遍，而是先靠一個關鍵入口縮小範圍。</p>
         <p>當你手機輸入聯絡人姓名的前幾個字，系統幾乎立刻帶出候選結果，這也是在善用快速索引的思維。</p>
+        <h3>具體例子</h3>
+        <ol>
+          <li><strong>寄物櫃：</strong>寄物時獲得一組取件號碼，工作人員輸入號碼，系統直接對映到哪格哪架，不必逐格搜尋記錄。</li>
+          <li><strong>超市會員卡：</strong>輸入會員編號，系統立刻取得姓名、集點、常購品。核對資料不是一筆一筆比對，而是直接經內部計算定位到對應位置。</li>
+          <li><strong>瀏覽器網址列：</strong>輸入網址後，系統對網址字串做雜湊對映，找到對應的快取記錄與伺服器位置，讓常用網站載入得更快。</li>
+          <li><strong>圖書館索書號：</strong>杜威十進位索書號就是一種雜湊關鍵字的對映，你知道要去哪個書架的哪一欄，直接走過去，不必搜遍整座館區。</li>
+          <li><strong>登入系統的密碼儲存：</strong>你的密碼不是直接儲存文字，而是經雜湊後存成「不可逆推的字串」。登入時將輸入的密碼同樣雜湊，再比對儲存的值，即使資料庫被偷，密碼也不會直接暴露。</li>
+        </ol>
       </section>
 
       <section>
@@ -62,10 +86,16 @@
         <p>雜湊像替資料先分配好地址，讓查找不必每次都重新迷路。</p>
       </section>
 
-      <nav class="chapter-nav" aria-label="章節導覽"><a class="button secondary" href="ch07.html">上一章</a><a class="button secondary" href="../toc.html">回目錄</a><a class="button primary" href="ch09.html">下一章</a></nav>
+      <nav class="chapter-nav" aria-label="章節導覽">
+        <a class="button secondary" href="ch07.html">上一章</a>
+        <a class="button secondary" href="../toc.html">回目錄</a>
+        <a class="button primary" href="ch09.html">下一章</a>
+      </nav>
     </article>
   </main>
-  <footer class="site-footer"><p>第 8 章把「查得快」背後的入口設計講清楚了。</p></footer>
+  <footer class="site-footer">
+    <p>第 8 章把「查得快」背後的入口設計講清楚了。</p>
+  </footer>
   <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
   <script src="../script.js"></script>
 </body>

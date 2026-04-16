@@ -7,11 +7,23 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body data-page="chapter" data-chapter="ch04">
-  <div class="progress-bar" aria-hidden="true"><span id="reading-progress"></span></div>
+  <div class="progress-bar" aria-hidden="true">
+    <span id="reading-progress"></span>
+  </div>
   <header class="site-header">
-    <div class="brand-block"><p class="eyebrow">第 4 章</p><a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a></div>
-    <nav class="top-nav" aria-label="章節導覽"><a href="../toc.html">目錄</a><a href="../about.html">關於本書</a></nav>
-    <div class="reader-controls" aria-label="閱讀設定"><button type="button" data-action="font-down">A-</button><button type="button" data-action="font-up">A+</button><button type="button" data-action="toggle-theme">深色模式</button></div>
+    <div class="brand-block">
+      <p class="eyebrow">第 4 章</p>
+      <a class="brand" href="../index.html">資料怎麼排，事情就怎麼順</a>
+    </div>
+    <nav class="top-nav" aria-label="章節導覽">
+      <a href="../toc.html">目錄</a>
+      <a href="../about.html">關於本書</a>
+    </nav>
+    <div class="reader-controls" aria-label="閱讀設定">
+      <button type="button" data-action="font-down">A-</button>
+      <button type="button" data-action="font-up">A+</button>
+      <button type="button" data-action="toggle-theme">深色模式</button>
+    </div>
   </header>
   <main class="page-shell">
     <article class="chapter-article">
@@ -44,6 +56,14 @@
         <h2>這在生活中像什麼</h2>
         <p>旅行行程的中途加站、接龍式待辦安排、串珠手鍊的重新串接，都很像鏈結串列。這些情境的重點不在每個元素有固定編號，而在它和前後元素之間的連接關係。</p>
         <p>再比如一份拜訪客戶的路線表，原本從 A 到 B 再到 C，但因為臨時改約，你要在 B 與 C 之間塞進 D。若你的安排方式本來就著重於「下一站是誰」，調整起來就比較自然。</p>
+        <h3>具體例子</h3>
+        <ol>
+          <li><strong>旅行行程插站：</strong>原定台北 → 台中 → 高雄，朋友臨時推薦嘉義，只需把「台中」的「下一站」改指向嘉義、嘉義的「下一站」改指高雄，後面不必整體重排。</li>
+          <li><strong>播放清單插入歌曲：</strong>在串流音樂 App 的播放佇列中間插入一首歌，只要把前後連結重接，不影響其他歌曲的位置。</li>
+          <li><strong>食譜步驟補充：</strong>寫食譜時，在「炒香蒜末」和「加入雞肉」中間補上「先醃製雞肉 10 分鐘」，只要在那個節點插入，後續步驟順序不變。</li>
+          <li><strong>公文簽核流程加關卡：</strong>原本「申請人 → 主管 → 結案」，法規要求新增「財務審核」，只要在主管節點之後插入財務節點，流程便能延伸而毋須重建整份表單。</li>
+          <li><strong>串珠手鍊修改：</strong>手鍊斷了一顆珠子，取下後直接把兩端重新串起；若想中間新增一顆，也只需拆開連接處，插入新珠再重接，不必整條重做。</li>
+        </ol>
       </section>
 
       <section>
@@ -74,7 +94,9 @@
       </nav>
     </article>
   </main>
-  <footer class="site-footer"><p>第 4 章補上了「固定位置」與「動態串接」之間的關鍵差異。</p></footer>
+  <footer class="site-footer">
+    <p>第 4 章補上了「固定位置」與「動態串接」之間的關鍵差異。</p>
+  </footer>
   <button id="back-to-top" class="back-to-top" type="button" aria-label="回到頁面頂端">↑</button>
   <script src="../script.js"></script>
 </body>
