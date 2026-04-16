@@ -49,6 +49,53 @@
         <h2>核心概念</h2>
         <p>如果把資料想成生活裡的物品，那資料結構就像你的收納方式。有些東西適合排成一列，有些東西適合分門別類，有些東西必須按照先來後到處理，有些則要先處理最重要的項目。</p>
         <blockquote>資料結構不是把資料放進電腦裡而已，而是決定資料之間如何排列、如何連結、如何被找到。</blockquote>
+
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 520 202" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch01-fig-title" role="img">
+            <title id="ch01-fig-title">無結構資料與有結構資料的對比</title>
+            <defs>
+              <marker id="ch01-arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="var(--accent)"/>
+              </marker>
+            </defs>
+            <!-- Left panel: unorganized -->
+            <rect x="15" y="26" width="200" height="154" rx="10" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="115" y="18" text-anchor="middle" font-size="11" fill="var(--muted)">沒有結構</text>
+            <rect x="30" y="48" width="56" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-15 58 66)"/>
+            <rect x="98" y="42" width="56" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5" transform="rotate(10 126 60)"/>
+            <rect x="48" y="100" width="56" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5" transform="rotate(6 76 118)"/>
+            <rect x="128" y="108" width="56" height="36" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-8 156 126)"/>
+            <rect x="72" y="150" width="66" height="22" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5" transform="rotate(3 105 161)"/>
+            <!-- Arrow -->
+            <line x1="228" y1="103" x2="282" y2="103" stroke="var(--accent)" stroke-width="2.5" marker-end="url(#ch01-arr)"/>
+            <!-- Right panel: organized tree -->
+            <rect x="298" y="26" width="207" height="154" rx="10" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="401" y="18" text-anchor="middle" font-size="11" fill="var(--muted)">有結構</text>
+            <rect x="351" y="40" width="100" height="26" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="401" y="57" text-anchor="middle" font-size="11" font-weight="700" fill="var(--text)">工作文件</text>
+            <line x1="401" y1="66" x2="370" y2="83" stroke="var(--accent)" stroke-width="1.5"/>
+            <line x1="401" y1="66" x2="432" y2="83" stroke="var(--accent)" stroke-width="1.5"/>
+            <rect x="328" y="83" width="76" height="24" rx="5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="366" y="99" text-anchor="middle" font-size="10" fill="var(--text)">2025</text>
+            <rect x="412" y="83" width="76" height="24" rx="5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="450" y="99" text-anchor="middle" font-size="10" fill="var(--text)">2026</text>
+            <line x1="366" y1="107" x2="350" y2="123" stroke="var(--accent)" stroke-width="1.5"/>
+            <line x1="366" y1="107" x2="382" y2="123" stroke="var(--accent)" stroke-width="1.5"/>
+            <line x1="450" y1="107" x2="434" y2="123" stroke="var(--accent)" stroke-width="1.5"/>
+            <line x1="450" y1="107" x2="466" y2="123" stroke="var(--accent)" stroke-width="1.5"/>
+            <rect x="314" y="123" width="44" height="22" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="336" y="137" text-anchor="middle" font-size="9" fill="var(--text)">Q1</text>
+            <rect x="362" y="123" width="44" height="22" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="384" y="137" text-anchor="middle" font-size="9" fill="var(--text)">Q2</text>
+            <rect x="410" y="123" width="44" height="22" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="432" y="137" text-anchor="middle" font-size="9" fill="var(--text)">Q3</text>
+            <rect x="458" y="123" width="44" height="22" rx="4" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="480" y="137" text-anchor="middle" font-size="9" fill="var(--text)">Q4</text>
+            <text x="260" y="197" text-anchor="middle" font-size="11" fill="var(--muted)">相同的資料，整理方式不同，決定了之後找資料的快慢</text>
+          </svg>
+          <figcaption>資料結構的核心：同樣的資料，左側隨意堆放難以查找，右側有層次地分類讓存取一目了然</figcaption>
+        </figure>
+
         <p>當我們知道不同整理方式會帶來不同結果，就能理解為什麼系統設計、工作流程和個人整理能力都會受到資料結構影響。</p>
       </section>
 

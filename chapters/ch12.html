@@ -48,6 +48,46 @@
         <p>資料結構的價值，不只在於幫助電腦存資料，也在於幫助人思考。當你面對一個混亂問題時，可以先問：這些資訊是平行排列的，還是有層級？它們在乎順序、關係、優先權，還是快速查找？</p>
         <p>一旦你開始用這些問題看事情，就會更容易拆解複雜情境。你不再只是覺得「事情很多」，而是能分辨這些事情究竟卡在分類、流程、關聯、優先序，還是查找方式上。</p>
         <blockquote>資料結構教我們的，不只是怎麼存資料，而是怎麼看清混亂背後缺的是哪一種秩序。</blockquote>
+
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 520 210" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch12-fig-title" role="img">
+            <title id="ch12-fig-title">資料結構思考四問</title>
+            <defs>
+              <marker id="ch12-arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="var(--accent)"/>
+              </marker>
+            </defs>
+            <!-- center: problem -->
+            <rect x="185" y="82" width="150" height="44" rx="10" fill="var(--accent)" stroke="var(--accent-strong)" stroke-width="2"/>
+            <text x="260" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="white">面對問題</text>
+            <text x="260" y="118" text-anchor="middle" font-size="11" fill="white">先問這四個問題</text>
+            <!-- top branch: hierarchy -->
+            <line x1="260" y1="82" x2="260" y2="54" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch12-arr)"/>
+            <rect x="170" y="18" width="180" height="34" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="260" y="31" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">有層級或分類嗎？</text>
+            <text x="260" y="46" text-anchor="middle" font-size="10" fill="var(--accent-strong)">→ 樹狀結構</text>
+            <!-- left branch: order -->
+            <line x1="185" y1="104" x2="153" y2="104" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch12-arr)"/>
+            <rect x="18"  y="72" width="133" height="56" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="84"  y="92"  text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">在意先後順序嗎？</text>
+            <text x="84"  y="108" text-anchor="middle" font-size="10" fill="var(--accent-strong)">→ 佇列／堆疊</text>
+            <text x="84"  y="122" text-anchor="middle" font-size="10" fill="var(--muted)">或堆積（優先序）</text>
+            <!-- right branch: relation -->
+            <line x1="335" y1="104" x2="367" y2="104" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch12-arr)"/>
+            <rect x="369" y="76" width="133" height="48" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="435" y="96"  text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">東西彼此有關聯嗎？</text>
+            <text x="435" y="114" text-anchor="middle" font-size="10" fill="var(--accent-strong)">→ 圖形結構</text>
+            <!-- bottom branch: fast lookup -->
+            <line x1="260" y1="126" x2="260" y2="154" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch12-arr)"/>
+            <rect x="160" y="156" width="200" height="34" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="260" y="170" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">要快速查找特定値嗎？</text>
+            <text x="260" y="184" text-anchor="middle" font-size="10" fill="var(--accent-strong)">→ 字典／雜湊</text>
+            <!-- caption -->
+            <text x="260" y="207" text-anchor="middle" font-size="11" fill="var(--muted)">四個問題決定用哪種結構，這就是資料結構思維的起點</text>
+          </svg>
+          <figcaption>資料結構思考框架：面對任何混亂問題時，先問這四個問題，就能找到最合適的整理方式</figcaption>
+        </figure>
+
         <p>這種能力會慢慢轉化成整理力。你會更知道怎麼命名、怎麼分層、怎麼定順序、怎麼設定入口。也會轉化成拆解力，讓你在問題還沒完全爆開前，就先看出該怎麼整理。</p>
       </section>
 

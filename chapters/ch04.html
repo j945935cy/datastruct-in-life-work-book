@@ -49,6 +49,53 @@
         <p>鏈結串列可以把每一筆資料想成一個節點，每個節點知道下一個節點是誰。資料不是靠固定位置排在一起，而是靠「連結」接在一起。這種方式的直覺很像接龍，一個接一個，順著線索往後走。</p>
         <p>它的優點是調整彈性高。若你想在中間插入一筆資料，不一定需要把後面所有資料整批搬動，只要把前後連結重新接好即可。刪除資料時也是類似的思考：把原本通往它的路改接到下一個節點。</p>
         <blockquote>鏈結串列不是在追求「一眼看到第幾格」，而是在追求「改動時不必整排重來」。</blockquote>
+
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 520 192" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch04-fig-title" role="img">
+            <title id="ch04-fig-title">鏈結串列插入節點示意</title>
+            <defs>
+              <marker id="ch04-arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="var(--accent)"/>
+              </marker>
+              <marker id="ch04-arr-new" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="var(--accent-strong)"/>
+              </marker>
+            </defs>
+            <!-- Before label -->
+            <text x="18" y="20" font-size="11" fill="var(--muted)">插入前：</text>
+            <!-- nodes A B C -->
+            <rect x="36"  y="32" width="78" height="40" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="75"  y="56" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">A</text>
+            <line x1="114" y1="52" x2="150" y2="52" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch04-arr)"/>
+            <rect x="152" y="32" width="78" height="40" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="191" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">B</text>
+            <line x1="230" y1="52" x2="266" y2="52" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch04-arr)"/>
+            <rect x="268" y="32" width="78" height="40" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="307" y="56" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">C</text>
+            <text x="380" y="56" text-anchor="start" font-size="10" fill="var(--muted)">B 的下一個是 C</text>
+            <!-- After label -->
+            <text x="18" y="106" font-size="11" fill="var(--muted)">插入後：（加入節點 D）</text>
+            <!-- nodes A B D C -->
+            <rect x="28"  y="118" width="68" height="40" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="62"  y="142" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">A</text>
+            <line x1="96"  y1="138" x2="122" y2="138" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch04-arr)"/>
+            <rect x="124" y="118" width="68" height="40" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="158" y="142" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">B</text>
+            <line x1="192" y1="138" x2="218" y2="138" stroke="var(--accent-strong)" stroke-width="2.5" marker-end="url(#ch04-arr-new)"/>
+            <!-- D: new node highlighted -->
+            <rect x="220" y="118" width="68" height="40" rx="8" fill="var(--accent)" stroke="var(--accent-strong)" stroke-width="2.5"/>
+            <text x="254" y="134" text-anchor="middle" font-size="15" font-weight="700" fill="white">D</text>
+            <text x="254" y="150" text-anchor="middle" font-size="9" fill="white">新節點</text>
+            <line x1="288" y1="138" x2="314" y2="138" stroke="var(--accent-strong)" stroke-width="2.5" marker-end="url(#ch04-arr-new)"/>
+            <rect x="316" y="118" width="68" height="40" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="350" y="142" text-anchor="middle" font-size="15" font-weight="700" fill="var(--text)">C</text>
+            <text x="400" y="138" text-anchor="start" font-size="10" fill="var(--muted)">B 指向 D，D 指向 C</text>
+            <!-- caption -->
+            <text x="260" y="184" text-anchor="middle" font-size="11" fill="var(--muted)">插入 D 只需重接兩條連結——A 與 C 完全不必搬動位置</text>
+          </svg>
+          <figcaption>鏈結串列插入示意：在 B 與 C 之間插入 D，只需改指向關係，其他節點完全不受影響</figcaption>
+        </figure>
+
         <p>但它也有代價。因為資料不是靠固定編號存取，你若想直接找到第 7 個節點，通常還是要從前面一路順著找過去。也就是說，它在彈性上有優勢，在快速定位特定位置上則不如陣列直觀。</p>
       </section>
 

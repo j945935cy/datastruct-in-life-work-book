@@ -48,6 +48,50 @@
         <p>集合可以理解成一個只在乎「有沒有出現過」的容器。它不強調順序，也不在意同樣的值放幾次，因為重點是唯一性。只要某個值已經存在，再放進去一次也不會多出第二份。</p>
         <p>字典則更像一本對照表。你給它一個鍵，它會回你對應的值。像是姓名對電話、員編對部門、商品代號對價格，都是典型的字典思維。這種結構的價值，在於把查找從「一個個找」變成「直接對照」。</p>
         <blockquote>集合回答的是「這個東西有沒有」，字典回答的是「這個鍵對應什麼」。</blockquote>
+
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 520 195" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch05-fig-title" role="img">
+            <title id="ch05-fig-title">集合與字典示意圖</title>
+            <!-- Left: Set -->
+            <text x="130" y="18" text-anchor="middle" font-size="12" font-weight="700" fill="var(--text)">集合（Set）</text>
+            <text x="130" y="32" text-anchor="middle" font-size="10" fill="var(--muted)">只在乎「有沒有」，不重複</text>
+            <ellipse cx="130" cy="115" rx="108" ry="68" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <rect x="72"  y="68"  width="52" height="24" rx="5" fill="var(--surface-strong)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="98"  y="84"  text-anchor="middle" font-size="11" fill="var(--text)">蘋果</text>
+            <rect x="130" y="88"  width="52" height="24" rx="5" fill="var(--surface-strong)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="156" y="104" text-anchor="middle" font-size="11" fill="var(--text)">牛奶</text>
+            <rect x="72"  y="118" width="52" height="24" rx="5" fill="var(--surface-strong)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="98"  y="134" text-anchor="middle" font-size="11" fill="var(--text)">麵包</text>
+            <!-- duplicate crossed out -->
+            <rect x="166" y="142" width="52" height="24" rx="5" fill="var(--surface)" stroke="var(--muted)" stroke-width="1.5" opacity="0.5"/>
+            <text x="192" y="158" text-anchor="middle" font-size="11" fill="var(--muted)" opacity="0.6">牛奶</text>
+            <line x1="166" y1="142" x2="218" y2="166" stroke="var(--muted)" stroke-width="2" opacity="0.7"/>
+            <line x1="218" y1="142" x2="166" y2="166" stroke="var(--muted)" stroke-width="2" opacity="0.7"/>
+            <text x="192" y="185" text-anchor="middle" font-size="9" fill="var(--muted)">重複被排除</text>
+            <!-- divider -->
+            <line x1="258" y1="14" x2="258" y2="188" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <!-- Right: Dictionary -->
+            <text x="390" y="18" text-anchor="middle" font-size="12" font-weight="700" fill="var(--text)">字典（Dictionary）</text>
+            <text x="390" y="32" text-anchor="middle" font-size="10" fill="var(--muted)">鍵對應值，直接查到答案</text>
+            <rect x="272" y="50"  width="84" height="28" rx="5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="314" y="68"  text-anchor="middle" font-size="11" font-weight="700" fill="var(--text)">會員 001</text>
+            <text x="364" y="65"  text-anchor="middle" font-size="13" fill="var(--accent)">→</text>
+            <rect x="376" y="50"  width="100" height="28" rx="5" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="426" y="68"  text-anchor="middle" font-size="11" fill="var(--text)">陳大明</text>
+            <rect x="272" y="92"  width="84" height="28" rx="5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="314" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="var(--text)">A5</text>
+            <text x="364" y="107" text-anchor="middle" font-size="13" fill="var(--accent)">→</text>
+            <rect x="376" y="92"  width="100" height="28" rx="5" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="426" y="110" text-anchor="middle" font-size="11" fill="var(--text)">三排五號座</text>
+            <rect x="272" y="134" width="84" height="28" rx="5" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="314" y="152" text-anchor="middle" font-size="11" font-weight="700" fill="var(--text)">apple</text>
+            <text x="364" y="149" text-anchor="middle" font-size="13" fill="var(--accent)">→</text>
+            <rect x="376" y="134" width="100" height="28" rx="5" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="426" y="152" text-anchor="middle" font-size="11" fill="var(--text)">蘋果</text>
+          </svg>
+          <figcaption>集合（Set）vs 字典（Dict）：前者管理「哪些元素存在」，後者讓一個鍵直接對到一個值</figcaption>
+        </figure>
+
         <p>兩者都強調查找效率，但前提是鍵與分類方式要設計得清楚。若鍵不一致、命名混亂或規則不穩定，再好的結構也會被搞亂。</p>
       </section>
 

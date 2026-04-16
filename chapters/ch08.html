@@ -48,6 +48,43 @@
         <p>雜湊可以把它想成一種「快速分派地址」的方法。你輸入一個鍵，例如帳號、身分證字號、商品編碼，系統會根據一套規則，把它導向一個對應位置。理想狀況下，你就能很快找到資料。</p>
         <p>這和字典概念相近，但更強調背後如何快速定位。它不是靠一筆一筆比對，而是靠鍵先被轉成適合索引的位置。真正的魔法不在資料本身，而在入口設計是否能讓資料迅速落到該去的地方。</p>
         <blockquote>雜湊的價值，不是記住所有資料，而是讓資料幾乎能直達目的地。</blockquote>
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 520 192" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch08-fig-title" role="img">
+            <title id="ch08-fig-title">雜湊函數示意圖</title>
+            <defs>
+              <marker id="ch08-arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="var(--accent)"/>
+              </marker>
+            </defs>
+            <text x="68" y="18" text-anchor="middle" font-size="11" fill="var(--muted)">輸入鍵（Key）</text>
+            <rect x="18"  y="30" width="100" height="28" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="68"  y="48" text-anchor="middle" font-size="11" fill="var(--text)">member001</text>
+            <rect x="18"  y="68" width="100" height="28" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="68"  y="86" text-anchor="middle" font-size="11" fill="var(--text)">A5書架</text>
+            <rect x="18"  y="106" width="100" height="28" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="68"  y="124" text-anchor="middle" font-size="11" fill="var(--text)">product-99</text>
+            <line x1="118" y1="44"  x2="188" y2="83"  stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch08-arr)"/>
+            <line x1="118" y1="82"  x2="188" y2="90"  stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch08-arr)"/>
+            <line x1="118" y1="120" x2="188" y2="97"  stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch08-arr)"/>
+            <rect x="190" y="62" width="120" height="58" rx="10" fill="var(--accent)" stroke="var(--accent-strong)" stroke-width="2"/>
+            <text x="250" y="87"  text-anchor="middle" font-size="13" font-weight="700" fill="white">hash</text>
+            <text x="250" y="107" text-anchor="middle" font-size="11" fill="white">function</text>
+            <line x1="310" y1="78"  x2="358" y2="52"  stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch08-arr)"/>
+            <line x1="310" y1="91"  x2="358" y2="91"  stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch08-arr)"/>
+            <line x1="310" y1="104" x2="358" y2="132" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch08-arr)"/>
+            <text x="420" y="18" text-anchor="middle" font-size="11" fill="var(--muted)">儲存槽（Bucket）</text>
+            <rect x="360" y="28"  width="136" height="30" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="428" y="47"  text-anchor="middle" font-size="11" fill="var(--muted)">槽 0（空）</text>
+            <rect x="360" y="64"  width="136" height="30" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <text x="428" y="83"  text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">槽 1 ← member001</text>
+            <rect x="360" y="100" width="136" height="30" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="428" y="119" text-anchor="middle" font-size="11" fill="var(--muted)">槽 2（空）</text>
+            <rect x="360" y="136" width="136" height="30" rx="6" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <text x="428" y="155" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">槽 3 ← A5書架</text>
+            <text x="260" y="185" text-anchor="middle" font-size="11" fill="var(--muted)">雜湊函數把任意鍵轉換成固定位置，查找時幾乎不需要透筆掃描</text>
+          </svg>
+          <figcaption>雜湊示意：輸入鍵經過 hash function 直接映射到儲存槽位置，查找時只需一步，不必從頭掃</figcaption>
+        </figure>
         <p>但天下沒有白吃的午餐。如果兩個不同鍵被分到同一位置，就會發生碰撞。這時候系統必須再想辦法處理衝突。因此，雜湊不是萬能快，而是有條件地快。</p>
       </section>
 

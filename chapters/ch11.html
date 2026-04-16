@@ -48,6 +48,45 @@
         <p>資料結構不是只有在寫程式時才有用，它其實是一種工作整理術。當你把文件分成主資料夾與子資料夾，你在用樹狀結構；當你把工單照進件順序排隊，你在用佇列；當你用員編一鍵查資料，你在用字典或雜湊；當你把急件往前推，你在使用堆積式的優先序思維。</p>
         <p>真正的差異，往往不在「有沒有用到」，而在「用得是否自覺」。當一個團隊知道自己在用什麼結構，就能更清楚地調整流程、拆解問題與設計工具。</p>
         <blockquote>工作效率常常不是多努力一點，而是把資料與流程排得更合理一點。</blockquote>
+
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 520 185" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch11-fig-title" role="img">
+            <title id="ch11-fig-title">工作場景與資料結構對照圖</title>
+            <defs>
+              <marker id="ch11-arr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+                <polygon points="0 0, 7 2.5, 0 5" fill="var(--accent)"/>
+              </marker>
+            </defs>
+            <text x="260" y="16" text-anchor="middle" font-size="11" fill="var(--muted)">常見工作場景與其背後的資料結構</text>
+            <!-- row 1 -->
+            <rect x="18"  y="30" width="116" height="36" rx="7" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="76"  y="52" text-anchor="middle" font-size="11" fill="var(--text)">文件分類</text>
+            <line x1="134" y1="48" x2="158" y2="48" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch11-arr)"/>
+            <rect x="160" y="30" width="104" height="36" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="212" y="52" text-anchor="middle" font-size="11" font-weight="700" fill="var(--text)">樹狀結構</text>
+            <rect x="278" y="30" width="116" height="36" rx="7" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="336" y="52" text-anchor="middle" font-size="11" fill="var(--text)">簽核流程</text>
+            <line x1="394" y1="48" x2="418" y2="48" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch11-arr)"/>
+            <rect x="420" y="30" width="84" height="36" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="462" y="52" text-anchor="middle" font-size="11" font-weight="700" fill="var(--text)">佇列</text>
+            <!-- row 2 -->
+            <rect x="18"  y="84" width="116" height="36" rx="7" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="76"  y="106" text-anchor="middle" font-size="11" fill="var(--text)">客戶資料查詢</text>
+            <line x1="134" y1="102" x2="158" y2="102" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch11-arr)"/>
+            <rect x="160" y="84" width="104" height="36" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="212" y="106" text-anchor="middle" font-size="11" font-weight="700" fill="var(--text)">字典／雜湊</text>
+            <rect x="278" y="84" width="116" height="36" rx="7" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="336" y="100" text-anchor="middle" font-size="11" fill="var(--text)">急件</text>
+            <text x="336" y="114" text-anchor="middle" font-size="11" fill="var(--text)">優先處理</text>
+            <line x1="394" y1="102" x2="418" y2="102" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch11-arr)"/>
+            <rect x="420" y="84" width="84" height="36" rx="7" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="462" y="106" text-anchor="middle" font-size="11" font-weight="700" fill="var(--text)">堆積</text>
+            <text x="260" y="148" text-anchor="middle" font-size="11" fill="var(--text)">這些工作你每天都在做——</text>
+            <text x="260" y="164" text-anchor="middle" font-size="11" fill="var(--text)">只是沒想過它們背後都有名字</text>
+            <text x="260" y="181" text-anchor="middle" font-size="11" fill="var(--muted)">工作中已在使用的資料結構，把它說清楚，流程才能設計得更好</text>
+          </svg>
+          <figcaption>工作場景對照：文件分類用樹、簽核流程用佇列、查資料用字典、急件排序用堆積——這些結構每天都在辦公室運作</figcaption>
+        </figure>
       </section>
 
       <section>

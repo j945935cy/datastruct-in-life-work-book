@@ -48,6 +48,59 @@
         <p>前面章節介紹的每一種結構，都像一種工具。陣列適合位置明確的資料，字典與雜湊適合快速查找，樹狀結構適合分類導覽，圖形結構適合描述關係，堆積適合處理優先順序。實務系統通常不是選一個，而是同時用好幾個。</p>
         <p>例如搜尋系統可能先靠索引快速找資料，再用排序規則決定顯示順序；推薦系統可能用圖找出相似關係，再用其他結構存使用者偏好；任務管理系統可能同時用樹管理專案層級、用佇列追工作流、用字典查任務狀態。</p>
         <blockquote>真實系統不是資料結構單選題，而是根據問題把工具組合起來。</blockquote>
+
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 520 192" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch10-fig-title" role="img">
+            <title id="ch10-fig-title">多種資料結構協同運作示意（以串流平台為例）</title>
+            <defs>
+              <marker id="ch10-arr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+                <polygon points="0 0, 7 2.5, 0 5" fill="var(--accent)"/>
+              </marker>
+            </defs>
+            <text x="260" y="16" text-anchor="middle" font-size="11" fill="var(--muted)">串流平台背後同時運作的資料結構</text>
+            <!-- 5 structure boxes -->
+            <rect x="18"  y="35" width="84" height="68" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="60"  y="58" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">樹狀結構</text>
+            <text x="60"  y="74" text-anchor="middle" font-size="10" fill="var(--muted)">內容</text>
+            <text x="60"  y="88" text-anchor="middle" font-size="10" fill="var(--muted)">分類</text>
+            <rect x="116" y="35" width="84" height="68" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="158" y="58" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">字典</text>
+            <text x="158" y="74" text-anchor="middle" font-size="10" fill="var(--muted)">使用者</text>
+            <text x="158" y="88" text-anchor="middle" font-size="10" fill="var(--muted)">資料查找</text>
+            <!-- center (main): graph -->
+            <rect x="214" y="25" width="92" height="88" rx="8" fill="var(--accent)" stroke="var(--accent-strong)" stroke-width="2.5"/>
+            <text x="260" y="50" text-anchor="middle" font-size="10" font-weight="700" fill="white">圖形結構</text>
+            <text x="260" y="66" text-anchor="middle" font-size="10" fill="white">相似內容</text>
+            <text x="260" y="80" text-anchor="middle" font-size="10" fill="white">關聯</text>
+            <text x="260" y="94" text-anchor="middle" font-size="10" fill="white">推薦引擎</text>
+            <rect x="320" y="35" width="84" height="68" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="362" y="58" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">堆積</text>
+            <text x="362" y="74" text-anchor="middle" font-size="10" fill="var(--muted)">熱門</text>
+            <text x="362" y="88" text-anchor="middle" font-size="10" fill="var(--muted)">排行計算</text>
+            <rect x="418" y="35" width="84" height="68" rx="8" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <text x="460" y="58" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">雜湊</text>
+            <text x="460" y="74" text-anchor="middle" font-size="10" fill="var(--muted)">快取</text>
+            <text x="460" y="88" text-anchor="middle" font-size="10" fill="var(--muted)">快速命中</text>
+            <!-- connecting arrows -->
+            <line x1="102" y1="69" x2="116" y2="69" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch10-arr)"/>
+            <line x1="200" y1="69" x2="214" y2="69" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch10-arr)"/>
+            <line x1="306" y1="69" x2="320" y2="69" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch10-arr)"/>
+            <line x1="404" y1="69" x2="418" y2="69" stroke="var(--accent)" stroke-width="1.5" marker-end="url(#ch10-arr)"/>
+            <!-- user experience box -->
+            <rect x="100" y="132" width="320" height="32" rx="8" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+            <text x="260" y="152" text-anchor="middle" font-size="11" fill="var(--text)">使用者只看到一個流畅的推薦介面</text>
+            <!-- arrows to user box -->
+            <line x1="60"  y1="103" x2="160" y2="132" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+            <line x1="158" y1="103" x2="210" y2="132" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+            <line x1="260" y1="113" x2="260" y2="132" stroke="var(--accent)" stroke-width="1.5" opacity="0.8"/>
+            <line x1="362" y1="103" x2="310" y2="132" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+            <line x1="460" y1="103" x2="360" y2="132" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+            <!-- caption -->
+            <text x="260" y="184" text-anchor="middle" font-size="11" fill="var(--muted)">真實系統不是一種結構，而是多種結構各司其職、協同運作</text>
+          </svg>
+          <figcaption>多結構協同示意：一個串流平台背後同時使用樹、字典、圖、堆積與雜湊——各自負責不同功能</figcaption>
+        </figure>
+
         <p>這種組合思維很重要。因為使用者看到的是一個整體體驗，但背後其實是不同結構各自扮演不同角色。</p>
       </section>
 
