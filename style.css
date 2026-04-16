@@ -366,6 +366,22 @@ main {
   color: var(--muted);
 }
 
+.chapter-en-term {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  font-family: "Inter", "SF Pro Text", system-ui, sans-serif;
+}
+
+.reading-time {
+  margin: 10px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
 .chapter-article section + section {
   margin-top: 28px;
 }
