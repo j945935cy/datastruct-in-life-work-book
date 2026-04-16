@@ -88,6 +88,35 @@
         <h2>這在生活中像什麼</h2>
         <p>捷運轉乘圖是一個很典型的例子。站點是節點，站與站之間的軌道是連線。你查路線時，不是在看層級，而是在找一條可行的路。社群關係也一樣，你和朋友、朋友的朋友，彼此之間形成一張關係網。</p>
         <p>地圖導航、推薦餐廳、找共同好友，甚至安排送貨路線，本質上都在處理節點之間的關係與路徑。</p>
+
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 520 185" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch07-metro-title" role="img">
+            <title id="ch07-metro-title">捷運路網示意圖</title>
+            <!-- line 1 horizontal -->
+            <line x1="50" y1="100" x2="470" y2="100" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
+            <!-- line 2 branch -->
+            <line x1="190" y1="38" x2="190" y2="100" stroke="var(--accent-strong)" stroke-width="5" stroke-linecap="round"/>
+            <!-- transfer station (中山) double ring -->
+            <circle cx="190" cy="100" r="22" fill="var(--surface-strong)" stroke="var(--accent-strong)" stroke-width="3.5"/>
+            <circle cx="190" cy="100" r="13" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+            <!-- regular stations -->
+            <circle cx="50"  cy="100" r="16" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="330" cy="100" r="16" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="470" cy="100" r="16" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <!-- branch station -->
+            <circle cx="190" cy="38"  r="16" fill="var(--accent-soft)" stroke="var(--accent-strong)" stroke-width="2.5"/>
+            <!-- labels -->
+            <text x="50"  y="126" text-anchor="middle" font-size="11" fill="var(--muted)">淡水</text>
+            <text x="190" y="135" text-anchor="middle" font-size="11" fill="var(--muted)">中山（轉乘）</text>
+            <text x="330" y="126" text-anchor="middle" font-size="11" fill="var(--muted)">台北車站</text>
+            <text x="470" y="126" text-anchor="middle" font-size="11" fill="var(--muted)">西門</text>
+            <text x="190" y="22"  text-anchor="middle" font-size="11" fill="var(--muted)">北投</text>
+            <!-- bottom caption -->
+            <text x="260" y="168" text-anchor="middle" font-size="11" fill="var(--muted)">捷運路網：站點為節點，軌道為連線，雙環表示可轉乘的交叉節點</text>
+          </svg>
+          <figcaption>捷運路網示意：同一個節點（中山站）可屬於多條不同路線，這正是圖有別於樹的關鍵</figcaption>
+        </figure>
+
         <h3>具體例子</h3>
         <ol>
           <li><strong>捷運路線圖：</strong>每個站是節點，軌道是連線。搜尋「台北車站到淡水」最快路徑，就是在圖上暫覽遊歷，找出換乘次數最少、時間最短的路徑。</li>
@@ -102,6 +131,43 @@
         <h2>這在工作上有什麼用</h2>
         <p>企業系統裡的服務相依圖、供應鏈流程、跨部門協作關係，都很像圖形結構。當某一個服務壞掉時，你需要知道它會影響哪些其他服務；當某個供應商延遲時，你要知道哪些流程會被連帶拖慢。</p>
         <p>在專案管理中，若任務之間存在前置依賴或彼此影響，也很適合用圖來看。這比單純列清單更能看出哪些節點是關鍵，哪些路徑最容易卡住。</p>
+
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 560 225" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch07-dag-title" role="img">
+            <title id="ch07-dag-title">任務前置依賴有向圖</title>
+            <defs>
+              <marker id="ch07-arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                <polygon points="0 0, 9 3.5, 0 7" fill="var(--accent)"/>
+              </marker>
+            </defs>
+            <!-- edges -->
+            <line x1="88"  y1="107" x2="177" y2="72"  stroke="var(--accent)" stroke-width="2" marker-end="url(#ch07-arrow)"/>
+            <line x1="88"  y1="123" x2="177" y2="158" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch07-arrow)"/>
+            <line x1="230" y1="62"  x2="318" y2="100" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch07-arrow)"/>
+            <line x1="230" y1="168" x2="318" y2="130" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch07-arrow)"/>
+            <line x1="374" y1="115" x2="447" y2="115" stroke="var(--accent)" stroke-width="2" marker-end="url(#ch07-arrow)"/>
+            <!-- nodes -->
+            <circle cx="60"  cy="115" r="26" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="203" cy="65"  r="26" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="203" cy="165" r="26" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="346" cy="115" r="26" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="476" cy="115" r="26" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <!-- node text (two lines each) -->
+            <text x="60"  y="110" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">需求</text>
+            <text x="60"  y="122" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">分析</text>
+            <text x="203" y="60"  text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">設計</text>
+            <text x="203" y="72"  text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">原型</text>
+            <text x="203" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">技術</text>
+            <text x="203" y="172" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">評估</text>
+            <text x="346" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">開發</text>
+            <text x="346" y="122" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">實作</text>
+            <text x="476" y="110" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">上線</text>
+            <text x="476" y="122" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">發布</text>
+            <!-- caption -->
+            <text x="280" y="210" text-anchor="middle" font-size="11" fill="var(--muted)">有向圖（DAG）：箭頭代表前置依賴方向，需求分析完成後才能分頭進行設計與技術評估</text>
+          </svg>
+          <figcaption>任務前置依賴圖：用有向圖清楚呈現哪些工作必須先完成，才能解鎖下一個節點</figcaption>
+        </figure>
       </section>
 
       <section>
