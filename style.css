@@ -395,6 +395,28 @@ main {
   margin-bottom: 6px;
 }
 
+.chapter-figure {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.chapter-figure svg {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 16px;
+  border: 1px solid var(--line);
+}
+
+.chapter-figure figcaption {
+  margin-top: 8px;
+  font-size: 0.875rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
 .site-footer {
   padding: 0 0 72px;
   color: var(--muted);

@@ -48,6 +48,39 @@
         <p>圖形結構的基本元素是節點與連線。節點代表人、地點、物件、系統或任務；連線則代表它們之間的關係。和樹狀結構不同的是，一個節點不一定只有一個上層，也可能與很多節點互相連接。</p>
         <p>因此，圖特別適合描述社群網絡、交通路線、物流網、網站連結與系統依賴。它的重點不是某個元素在第幾層，而是從這裡能通到哪裡、彼此之間距離多遠、有哪些可能的路徑。</p>
         <blockquote>圖形結構不是在分類世界，而是在描繪世界裡的連結。</blockquote>
+
+        <figure class="chapter-figure">
+          <svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ch07-fig-title" role="img">
+            <title id="ch07-fig-title">圖形結構示意：節點與連線</title>
+            <!-- edges -->
+            <line x1="100" y1="130" x2="200" y2="60"  stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="100" y1="130" x2="200" y2="200" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="200" y1="60"  x2="320" y2="60"  stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="200" y1="60"  x2="320" y2="200" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="200" y1="200" x2="320" y2="200" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="320" y1="60"  x2="420" y2="130" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="320" y1="200" x2="420" y2="130" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="200" y1="200" x2="320" y2="60"  stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 4" opacity="0.5"/>
+            <!-- nodes -->
+            <circle cx="100" cy="130" r="22" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="200" cy="60"  r="22" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="200" cy="200" r="22" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="320" cy="60"  r="22" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="320" cy="200" r="22" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <circle cx="420" cy="130" r="22" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2.5"/>
+            <!-- node labels -->
+            <text x="100" y="130" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill="var(--text)">A</text>
+            <text x="200" y="60"  text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill="var(--text)">B</text>
+            <text x="200" y="200" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill="var(--text)">C</text>
+            <text x="320" y="60"  text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill="var(--text)">D</text>
+            <text x="320" y="200" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill="var(--text)">E</text>
+            <text x="420" y="130" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700" fill="var(--text)">F</text>
+            <!-- bottom caption -->
+            <text x="240" y="248" text-anchor="middle" font-size="11.5" fill="var(--muted)">節點（Node）以圓形表示，連線（Edge）代表兩者之間的關係或路徑</text>
+          </svg>
+          <figcaption>圖形結構示意：六個節點互相連結，每條線代表一條可行的關係或路徑</figcaption>
+        </figure>
+
         <p>這也是為什麼很多現代服務離不開圖。只要你在乎「推薦誰給誰」、「從哪裡到哪裡」、「什麼東西彼此有關」，圖就會非常自然地出現。</p>
       </section>
 
